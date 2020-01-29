@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     
+    
 }
 
 body{
@@ -91,11 +92,32 @@ body{
     align-items: center;
     display: flex;
     align-items: center;
-    width: 34vw;
+    width: 25vw;
     transform: translateX(100%);
     transition: transform 0.5s ease;
     background: rgba(40, 201, 255, 0.395);
+    /* border-top-left-radius: 30%;
+    border-bottom-left-radius: 30%; */
+    
 }
+
+.meny li{
+    font-weight: 300;
+    margin: 10px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.meny li::before,
+.meny li::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: chocolate;
+    position: absolute;
+    
+}
+
 
 .nav-active{ 
     transform: translateX(0%);
@@ -132,9 +154,9 @@ body{
         width: 60vw;
         transform: translateX(0%);
         transition: transform 0.5s ease;
-        background: rgba(255, 255, 255, 0);
-        
+        background: rgba(255, 255, 255, 0);       
     }
+
     nav{
         display: flex;
         justify-content: left;
@@ -149,8 +171,9 @@ body{
         text-decoration: none;
         letter-spacing: 3px;
         font-size: 16px;
-        font-weight: bold;
+        font-weight: 300;
         margin: 10px;
+        text-transform: uppercase;
             
     }
     .list-item-div{
@@ -161,6 +184,123 @@ body{
     }
    
 }
+
+
+
+.wrapper{
+    padding-top: 300px;
+    transform: rotate(45deg);
+    padding-left: 200px;
+    position: fixed;
+    display: grid;
+    grid-template-areas: 
+    "b1 b2 b3"
+    "b4 b5 b6"
+    "b7 b8 b9"
+    ;
+}
+
+.box{
+    background: black;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;  
+    border-radius: 15%;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.b1{
+    grid-area: b1;
+}
+
+.b2{
+    grid-area: b2;
+}
+
+.b3{
+    grid-area: b3;
+}
+
+.b4{
+    grid-area: b4;
+}
+
+.b6{
+    grid-area: b6;
+}
+
+.b7{
+    grid-area: b7;
+}
+
+.b8{
+    grid-area: b8;
+}
+
+.b9{
+    grid-area: b9;
+}
+
+.center-box{
+    background-color: rgba(40, 201, 255, 0.719);
+    grid-area: b5;
+    opacity: 1;
+}
+
+.center-box-active{
+    background-color: #e91e62;
+}
+
+.box:hover{
+    background-color: aliceblue;
+}
+
+.box p{
+    transform: rotate(-45deg);
+    font-size: 17px;
+}
+
+box p i{
+    color: aliceblue;
+
+}
+
+.box:hover i{
+    color: black;
+}
+
+
+
+
+
+
+
+
+.diamond-grid{
+    width: 70%;
+    margin: 150px auto 0;
+    transform: rotate(45deg);
+    position: fixed;
+    display: grid;
+    
+    
+}
+
+.items{
+    width: 220px;
+    height: 220px;
+    background: white;
+    transition: 0.5s;
+
+
+}
+
+
+
+
 
 
 

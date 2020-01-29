@@ -23,4 +23,19 @@ const Slide = ()=>{
         });
     }
 
-Slide();
+const Share = ()=>{
+    const shareButton = document.querySelector('.center-box');
+    
+    shareButton.addEventListener('click',() => {
+        shareButton.classList.toggle('center-box-active');
+    });
+}
+
+function changeIcon(x) {
+    x.classList.toggle("fa-instagram");
+}
+
+Share();
+Slide();    
+
+    
