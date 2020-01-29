@@ -210,39 +210,10 @@ body{
     justify-content: center;
     align-items: center;
     opacity: 0;
+    margin: 2px;
 }
 
-.b1{
-    grid-area: b1;
-}
 
-.b2{
-    grid-area: b2;
-}
-
-.b3{
-    grid-area: b3;
-}
-
-.b4{
-    grid-area: b4;
-}
-
-.b6{
-    grid-area: b6;
-}
-
-.b7{
-    grid-area: b7;
-}
-
-.b8{
-    grid-area: b8;
-}
-
-.b9{
-    grid-area: b9;
-}
 
 .center-box{
     background-color: rgba(40, 201, 255, 0.719);
@@ -252,10 +223,15 @@ body{
 
 .center-box-active{
     background-color: #e91e62;
+
+}
+
+.box-active{
+    opacity: 1;
 }
 
 .box:hover{
-    background-color: aliceblue;
+    background-color: rgba(240, 248, 255, 0.685);
 }
 
 .box p{
@@ -265,7 +241,10 @@ body{
 
 box p i{
     color: aliceblue;
+}
 
+.center-box-active p i{
+    font-size: 22px;
 }
 
 .box:hover i{
