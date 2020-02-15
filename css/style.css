@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+
 
 *{
     margin: 0;
@@ -14,10 +16,10 @@ body{
     display: grid;
     grid-template-areas:
     "na na na na"
-    "he he he he"
-    "a1 se se se"
-    "a1 se se se"
-    "a4 a4 a4 a4"
+    "se se se se"
+    "se se se se"
+    "se se se se"
+    "a4 a4 a4 a3"
     "a5 a5 a5 a5"
     "fo fo fo fo"
     ;
@@ -26,16 +28,18 @@ body{
     grid-template-rows: 10vh 45vw 20vh 1fr 1.5fr 1fr 20vh;
     grid-template-columns: 6fr 1fr 1fr 3fr;
     background: linear-gradient(rgb(0, 0, 0), rgba(174, 23, 166, 0.776));
-    grid-gap: 5px;
+    grid-gap: 0.7vh;
     overflow-x: scroll;
     overflow-y: scroll;
+    position: fixed;
+    z-index: -3;
 }
 
 .nav{
     grid-area: na;
     background: rgba(40, 201, 255, 0.719);
     position: sticky;    
-    top: 0px;
+    top: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -85,7 +89,7 @@ body{
     display: flex;
     justify-content: space-around;  
     position: absolute;
-    right: 0px;
+    right: 0;
     height: 92vh;
     top: 10vh; 
     flex-direction: column;
@@ -106,17 +110,40 @@ body{
     margin: 10px;
     text-transform: uppercase;
     position: relative;
+    padding: 0.5vh;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2.5vh;
 }
 
 .meny li::before,
 .meny li::after{
     content: "";
     width: 100%;
-    height: 2px;
-    background: chocolate;
+    height: 0.27vh;
+    background: rgb(255, 0, 242);
     position: absolute;
-    
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
 }
+
+.meny li::after{
+    bottom: 0;
+    transform-origin: right;
+}
+
+.meny li::before{
+    top: 0;
+    transform-origin: left;
+}
+
+.meny li:hover::before,
+.meny li:hover::after {
+    transform: scaleX(1);
+}
+
+
+
 
 
 .nav-active{ 
@@ -136,7 +163,7 @@ body{
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 964px) {
     
     
     .meny{
@@ -144,7 +171,7 @@ body{
         display: flex;
         justify-content: space-around;  
         position: absolute;
-        right: 0px;
+        right: 0;
         height: 10vh;
         top: 0vh; 
         flex-direction: row;
@@ -172,14 +199,14 @@ body{
         letter-spacing: 3px;
         font-size: 16px;
         font-weight: 300;
-        margin: 10px;
+        margin: 1.35vh;
         text-transform: uppercase;
             
     }
     .list-item-div{
         opacity: 1;
-        transform: translateX(0px);
-        margin: 0px;
+        transform: translateX(0);
+        margin: 0;
         width: 10vw;
     }
    
@@ -188,16 +215,21 @@ body{
 
 
 .wrapper{
+    height: 21vh;
+    width: 21vh;
     padding-top: 300px;
     transform: rotate(45deg);
     padding-left: 200px;
-    position: fixed;
+    position: sticky;
+    grid-area: se;
     display: grid;
     grid-template-areas: 
     "b1 b2 b3"
     "b4 b5 b6"
     "b7 b8 b9"
     ;
+    position: sticky;
+    z-index: 2;
 }
 
 .box{
@@ -211,6 +243,7 @@ body{
     align-items: center;
     opacity: 0;
     margin: 2px;
+    transition: 0.3s;
 }
 
 
@@ -226,12 +259,18 @@ body{
 
 }
 
-.box-active{
-    opacity: 1;
-}
+
 
 .box:hover{
     background-color: rgba(240, 248, 255, 0.685);
+}
+
+.box:active{
+    background-color: rgba(8, 73, 129, 0.685);
+}
+
+.box-active{
+    opacity: 1;
 }
 
 .box p{
@@ -254,28 +293,100 @@ box p i{
 
 
 
-
-
-
-
 .diamond-grid{
-    width: 70%;
-    margin: 150px auto 0;
+    padding: 0;
+    margin: 100px;
+    grid-area: se;
+    width: 70vw;
+    height: 70vw;
     transform: rotate(45deg);
-    position: fixed;
     display: grid;
-    
-    
+    grid-template-areas: 
+    "n01 n02 n03 n04 n05"
+    "n06 n07 n08 n09 n10"
+    "n11 n12 n13 n14 n15"
+    "n16 n17 n18 n19 n20"
+    "n21 n22 n23 n24 n25"
+    ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;  
+
+    position: relative;
+    z-index: -1;
 }
 
-.items{
-    width: 220px;
-    height: 220px;
-    background: white;
-    transition: 0.5s;
-
-
+.item{
+    background-color: white;
 }
+
+
+.item1{
+    grid-area: n04;
+    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.item2{
+    grid-area: n08;
+    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.item3{
+    grid-area: n09;
+    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.item4{
+    grid-area: n10;
+    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.item5{
+    grid-area: n12;
+    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.item6{
+    grid-area: n13;
+    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.item7{
+    grid-area: n14;
+    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.item8{
+    grid-area: n16;
+    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.item9{
+    grid-area: n17;
+    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.item10{
+    grid-area: n18;
+    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.item11{
+    grid-area: n22;
+    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 
 
 

@@ -58,6 +58,7 @@ const changeIcon = ()=>{
         }else{   
             document.querySelector("#icon").className = "fa fa-share-alt";
         }
+
     });
 
 }

@@ -140,21 +140,33 @@
 
         I detta tidigaste stadie är jag ännu osäker på vad för innehåll min sida ska ha. Av dennna anledningen har jag istället påbörjat skapandet av ett menysystem. För att sidan ska bli lättanvänd har jag valt att datoranvändare skall ha menyn tydlig i nav-blocket synlig direkt medan man som mobilanvändare kan ha en meny som först blir synlig när en burger klickas.
 
-        Under lektionen hade jag mindre problem med att fixa detta. Anledningen tror jag främst kan vara att jag när jag gjort en meny på detta sättet tidigare utgått från datoranvändare först vilket nu gör att jag måste arbeta lite baklänges för att göra omvänt (mobile first). Jag hann inte med att fixa denna delen under lektionen utan jag planerar att studera vilka delar som måste förändras för att det ska fungera lite nogare fram till nästa lektionstillfälle. Fram till nästa lektion planerar jag också att ha fått en klarare bild av vad min sidas syfte ska vara för att på så sätt kunna anpassa designen för detta syftet.
+        Under lektionen hade jag mindre problem med att fixa detta. Anledningen tror jag främst kan vara att jag när jag gjort en meny på detta sättet tidigare utgått från datoranvändare först vilket nu gör att jag måste arbeta lite baklänges för att göra omvänt (mobile first). Jag hann inte med att fixa denna delen under lektionen utan jag planerar att studera vilka delar som måste förändras för att det ska fungera lite nogare fram till nästa lektionstillfälle. Fram till nästa lektion planerar jag också att ha fått en klarare bild av vad min sidas syfte ska vara för att på så sätt kunna anpassa designen för detta syftet.       
 
-        
-        
-    </p>
+        Bilden nedan visar hur långt jag kommit med att skapa detta: 
+
+        <img src="img/från lektion 1.PNG" alt="Grunden i mitt meny-system">
+     </p>
 
 
     <h3>Lektion vecka 5</h3>
     <!-- Fyll på med dokumentation här. -->
 
-    Under den här lektionen har jag planerat att skapa grunden till en layout som alla mina html dokument ska utgå ifrån. Jag planerar att skapa en unik layout med rutor för att visa vart på sidan man befinner sig och sedan eventuellt kunna använda denna för navigering. För att påbörja arbetet har jag ritat en enkel skiss som jag sedan kommer att utgå från och eventuellt förbättra under mitt arbete med att implementera konceptet på sidan.
+    Under den här lektionen har jag planerat att skapa grunden till en layout som alla mina html dokument ska utgå ifrån. Jag planerar att skapa en unik layout med rutor för att visa vart på sidan man befinner sig och sedan eventuellt kunna använda denna för navigering. För att påbörja arbetet har jag ritat en enkel skiss som jag sedan kommer att utgå från och eventuellt förbättra under mitt arbete med att implementera konceptet på sidan. Vidare är jag dock osäker på hur sidans layout ska skilja sig åt mellan de olika sidorna och på vilket sätt ska kan använda mina kunskaper för att implementera diverse olika funktioner som gör sidan lättanvänd, anpassad efter olika enheter och samtidgt esetetisk. 
 
-    I övrigt planerar jag också att skapa en social-media sharing button lista för att kunna dela innehållet på sidan. För att göra detta kommer jag dock behöva läsa på lite gällande mer avancerade domskript och hur dessa kan användas. För att få denna list-menyn att se estetisk ut vill jag även att den ska kunna visas genom ett klick och stängas genom ett klick. Detta kommer också kräva java-script men detta kommer vara betydligt enklare att göra.
+    Jag har tidgare funderat på att skapa en struktur bestående av oktagonala former som jag kan fylla med information. På så sätt hade detta gett en estetisk layout med former som främst tänkte användas för att inehålla bilder och eventuellt signalera på vilken del av sidan som man befinner sig. Det som hade gjort denna strukturen så bra är att man hade kunnat kombinera bilder som tar upp olika många rutor samtigt som man ändå behåller en detaljerad och konsekvent stuktur. Vidare funderade jag även på att dessa ska symbolisera sidans innehåll och att man genom att klicka på någon av figurerna direkt ska tas till denna delen av sidan. Antingen om all information inte direkt ska vara synlig eller om man helt enkelt snabbt ska kunna ta sig längre ned på den sidan man befinner sig. (Detta var främst tänkt för huvudsidan: index.html, men kan även komma att implementeras på de andra med andra bilder som leder till olika platser inom samma html-dokument). För att få bättre förståelse för konceptet se väldigt grundläggnde skiss nedan:
+
+    <img src="img/Enkel_skiss_av_problematisk_layout.jpg" alt="Problematisk layout som troligen inte går att implementera genom att använda grid i css.">
+
+
+    Eftersom detta verkar vara väldigt jobbigt att implementera med hjälp av css-grid kommer jag troligen satsa på en något mindre komplicerad layout med ett grid roterat 45-grader. Detta kommer ge en liknande effekt samtidigt som det är enkelt att implempentera då det enkelt kan göras med ett vanligt grid-system.
+
+    I övrigt planerar jag också att skapa en social-media sharing button lista för att kunna dela innehållet på sidan. För att göra detta kommer jag dock behöva läsa på lite gällande mer avancerade domskript och hur dessa kan användas. För att få denna list-menyn att se estetisk ut vill jag även att den ska kunna visas genom ett klick och stängas genom ett klick. Detta kommer också kräva java-script men detta kommer vara betydligt enklare att göra. 
 
     På grund av tidsbrist och problem med hur jag skulle centrera och styla min share-button list hann jag inte riktigt med att slutföra java-scriptet då det visade sig vara lite mer komplicerat än vad jag först trott. Fram till nästkommande lektion planerar jag att slutföra denna delen och gå vidare till att faktiskt skapa strukturen för sidan och välja ut de bilder som passar bäst. Viktigt att tänka på är ju också att jag inte kan använda alla bilder som jag kanske velat då flera av dem befinner sig under copy-right skydd eller helt enkelt inte får användas eller modifieras på det sätt som jag vill.
+
+    Nedan visas ett mindre problem som jag tvingades överstiga. Tidigare hade jag strukturerat upp knapparna genom att använda 'Display: inline-block;' men eftersom jag samtidigt ville centrera inehållet i dessa div-taggarna genom att göra div:en till en flex-föräldermed hjälp av 'Display: flex;' var detta inte möjligt. Istället var jag tvungen att lägga div-taggarna i en större div och låta den fungera som ett grid-system. På så sätt kunde jag både få min önskade layout och centrera dess innehåll. 
+
+    <img src="img/Från början av lektion 2 (problem med flex respektive inline-block).PNG" alt="Problem med flex respektive inline-block">
 
     <h3>Lektion vecka 6</h3>
     <!-- Fyll på med dokumentation här. -->
