@@ -67,4 +67,40 @@ changeIcon();
 Share();
 Slide();    
 
-    
+
+$(document).ready(function(){
+    $('.login-info-box').fadeOut();
+    $('.login-show').addClass('show-log-panel');
+});
+
+
+$('.login-reg-panel input[type="radio"]').on('change', function() {
+    if($('#log-login-show').is(':checked')) {
+        $('.register-info-box').fadeOut(); 
+        $('.login-info-box').fadeIn();
+        
+        $('.white-panel').addClass('right-log');
+        $('.register-show').addClass('show-log-panel');
+        $('.login-show').removeClass('show-log-panel');
+        
+    }
+    else if($('#log-reg-show').is(':checked')) {
+        $('.register-info-box').fadeIn();
+        $('.login-info-box').fadeOut();
+        
+        $('.white-panel').removeClass('right-log');
+        
+        $('.login-show').addClass('show-log-panel');
+        $('.register-show').removeClass('show-log-panel');
+    }
+});
+
+function test_str() { 
+
+    var str = 
+        document.getElementById("password_check").value; 
+    if (str.match(/[a-z]/g) && str.length >= 1) 
+        document.querySelector("#user_logo").className = "fa fa-sign-out";
+        document.querySelector("#user_logo_index").addClass('fa fa-sign-out');
+        $('#user_logo_index').removeClass('fa fa-user');
+} 

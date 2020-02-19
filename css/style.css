@@ -12,20 +12,21 @@ body{
     overflow: hidden;
 }
 
-.gridwrapper{
+.gridwrapper-index{
     display: grid;
     grid-template-areas:
     "na na na na"
+    "s1 s1 s1 s1"
     "se se se se"
     "se se se se"
     "se se se se"
     "a4 a4 a4 a3"
-    "a5 a5 a5 a5"
+    "a5 a5 a5 a6"
     "fo fo fo fo"
     ;
     height: 100vh;
     width: 100vw;
-    grid-template-rows: 10vh 45vw 20vh 1fr 1.5fr 1fr 20vh;
+    grid-template-rows: 10vh 67vw 45vw 20vh 1fr 1.5fr 1fr 30vh;
     grid-template-columns: 6fr 1fr 1fr 3fr;
     background: linear-gradient(rgb(0, 0, 0), rgba(174, 23, 166, 0.776));
     grid-gap: 0.7vh;
@@ -96,12 +97,13 @@ body{
     align-items: center;
     display: flex;
     align-items: center;
-    width: 25vw;
+    width: 100vw;
     transform: translateX(100%);
     transition: transform 0.5s ease;
-    background: rgba(40, 201, 255, 0.395);
+    background: rgb(40, 201, 255);
     /* border-top-left-radius: 30%;
     border-bottom-left-radius: 30%; */
+
     
 }
 
@@ -213,15 +215,38 @@ body{
 }
 
 
+.img-sektion{
+
+    width: 100vw;
+    background-image: url(../img/pamela-saunders-yV8hguKKMq0-unsplash.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-area: s1;
+    display: flex;
+    justify-content: center;
+    z-index: -2;
+}
+
+.menyruta{
+    height: 20vh;
+    width: 70vw;
+    position: relative;
+    margin-top: 25vh;
+    background: rgba(22, 138, 80, 0.776);
+    z-index: -1;
+}
+
+
+
 
 .wrapper{
     height: 21vh;
     width: 21vh;
-    padding-top: 300px;
     transform: rotate(45deg);
-    padding-left: 200px;
     position: sticky;
-    grid-area: se;
+    bottom: 10vh;
+    left: 10vw;
+    grid-area: a5;
     display: grid;
     grid-template-areas: 
     "b1 b2 b3"
@@ -230,6 +255,7 @@ body{
     ;
     position: sticky;
     z-index: 2;
+
 }
 
 .box{
@@ -300,6 +326,9 @@ box p i{
     width: 70vw;
     height: 70vw;
     transform: rotate(45deg);
+    position: absolute;
+    top: -150px;
+    
     display: grid;
     grid-template-areas: 
     "n01 n02 n03 n04 n05"
@@ -311,7 +340,6 @@ box p i{
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;  
 
-    position: relative;
     z-index: -1;
 }
 
@@ -390,14 +418,221 @@ box p i{
 
 
 
+.footer{
+    height: 25vh;
+    grid-area: fo;
+    background: rgba(49, 146, 231, 0.685);
+
+}
 
 
 
 
+
+.gridwrapper-min-sida{
+    display: grid;
+    grid-template-areas:
+    "na na na na"
+    "se se se se"
+    "se se se se"
+    "se se se se"
+    "a4 a4 a4 a3"
+    "a5 a5 a5 a6"
+    "fo fo fo fo"
+    ;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: 10vh 67vw 45vw 20vh 1fr 1.5fr 1fr 30vh;
+    grid-template-columns: 6fr 1fr 1fr 3fr;
+    background: linear-gradient(rgb(0, 0, 0), rgba(174, 23, 166, 0.776));
+    grid-gap: 0.7vh;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    position: fixed;
+    z-index: -3;
+}
+
+.login-reg-panel{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    right: 0;
+    left: 30vw;
+    margin: auto;
+    height: 400px;
+    background-color: rgba(30,30,30,0.9);
+    grid-area: a4;
+}
+
+.white-panel{
+    background-color: rgba(255,255,255,1);
+    height: 500px;
+    position: absolute;
+    top: -50px;
+    width: 50%;
+    right: calc(50%-50px);
+    transition: .3s ease-in-out;
+    z-index: 0;
+}
+
+.login-reg-panel input[type="radio"]{
+    position: relative;
+    display: none;
+}
+
+.login-reg-panel #label-login,
+.login-reg-panel #label-register{
+    border: 1px solid #939393;
+    padding: 0 5px;
+    display: block;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login-info-box{
+    width: 30%;
+    padding: 0 50px;
+    top: 20%;
+    right: 0;
+    position: absolute;
+    text-align: left;
+}
+
+.register-info-box{
+    width: 30%;
+    padding: 0 50px;
+    top: 20%;
+    right: 0;
+    position: absolute;
+    text-align: left;
+}
+
+.right-log{right: 50px !important;}
+
+.login-show,
+.register-show{
+    z-index: 1;
+    display: none;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    color: #242424;
+    text-align: left;
+    padding: 50px;
+}
+
+.show-log-panel{
+    display: block;
+    opacity: 0.9;
+}
+
+.login-show input[type="text"],
+.login-show input[type="password"]{
+    width: 100%;
+    display: block;
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #b5b5b5;
+    outline: none;
+}
+
+.login-show input[type="button"]{
+    max-width: 150px;
+    width: 100%;
+    background: #444444;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    float: right;
+    cursor: pointer;
+
+}
+
+.login-show a{
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.register-show input[type="text"],
+.register-show input[type="password"]{
+    width: 100%;
+    display: block;
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #b5b5b5;
+    outline: none;
+}
+
+.register-show input[type="button"]{
+    max-width: 150px;
+    width: 100%;
+    background: #444444;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px;
+    float: right;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.credit {
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    color: #3B3B25;
+    margin: 0;
+    padding: 0;
+    font-family: Arial,sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    z-index: 99;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1{
+    color: powderblue;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2.5vh;
+}
+
+h2{
+    color: powderblue;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2.5vh;
+}
+
+p{
+    color: rgb(250, 250, 250);
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.7vh;
+}
 
 a{
     color: rgb(226, 226, 226);
     text-decoration: none;
     letter-spacing: 3px;  
     
+}
+
+.icon{
+    font-size: 4vh;
+    cursor: pointer;
+   
 }
