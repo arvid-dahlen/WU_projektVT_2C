@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js" ></script>
 </head>
 <body>
-<div class="gridwrapper-min-sida">
+<div class="gridwrapper-weather">
         <nav class="nav">
             <a href="index.html"><div class="logo"><img id="" src="" alt="Logga"></div></a>    
             <a class="icon" href="min_sida.html"><p><i class="fa fa-user"></i></p></a>
@@ -54,7 +54,7 @@
                 <div class="location"> Zermatt </div>
                 <div class="more"><i class="fa fa-info-circle"></i></div>
                 <div class="weather">
-                    <i class="fa fa-cloud"></i>
+                    <i id="today-icon" class="fa fa-cloud"></i>
                     <h1>8°<br><span>Idag</span></h1>
                 </div>
 
@@ -75,29 +75,39 @@
                     </li>
                 </ul>
             </div>
+        
+
+            <div class="back">
+                <div class="go-back"> <i class="fa fa-chevron-circle-right"></i></div> 
+
+                <ul class="forecast">
+                        <li>
+                            <div class="day">Igår</div>
+                            <div class="temp"><i class="fa fa-cloud"></i>2°</div>
+                        </li>
+
+                        <li>
+                            <div class="day">Idag</div>
+                            <div class="temp"><i class="fa fa-tint"></i>7°</div>
+                        </li>
+
+                        <li>
+                            <div class="day">Imorgon</div>
+                            <div class="temp"><i class="fa fa-snowflake"></i>5°</div>
+                        </li>
+                    </ul>
+
+            </div>
         </div>
 
-        <div class="back">
-            <div class="go-back"> <i class="fa fa-snowflake"></i> </div> 
 
-            <ul class="forecast">
-                    <li>
-                        <div class="day">Igår</div>
-                        <div class="temp"><i class="fa fa-cloud"></i>2°</div>
-                    </li>
 
-                    <li>
-                        <div class="day">Idag</div>
-                        <div class="temp"><i class="fa fa-tint"></i>7°</div>
-                    </li>
 
-                    <li>
-                        <div class="day">Imorgon</div>
-                        <div class="temp"><i class="fa fa-snowflake"></i>5°</div>
-                    </li>
-                </ul>
 
-        </div>
+        
+
+
+
 
 
 </div>

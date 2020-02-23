@@ -104,3 +104,22 @@ function test_str() {
         document.querySelector("#user_logo_index").addClass('fa fa-sign-out');
         $('#user_logo_index').removeClass('fa fa-user');
 } 
+
+
+const showBack = ()=>{
+    document.querySelector('.more').addEventListener('click',() =>{
+        document.querySelector('.back').classList.toggle('back-active');
+        document.querySelector('.front').classList.toggle('front-notActive');
+    });
+}
+showBack(); 
+
+const showFront = ()=>{
+    document.querySelector('.go-back').addEventListener('click',() =>{
+        document.querySelector('.back').classList.toggle('back-active');
+        document.querySelector('.front').classList.toggle('front-notActive');
+    });
+}
+showFront(); 
+
+
