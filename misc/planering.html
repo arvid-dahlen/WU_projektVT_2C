@@ -262,23 +262,31 @@
     <!-- Fyll på med dokumentation här. -->
 
 
-    Under perioden mellan lektionen vecka 6 och lektionen vecka 8 har jag känt att det var viktigt att komma lite i fas med arbetet. Jag har därför påbörjat och nästintill slufört skapandet av en inloggningssida som också har möjlighet att fungera för att registerera sig eller skapa ett konto. Än så länge har jag inte löst eller undersökt möjlighten att använda mig av java-script för att göra inloggningen fullt fungerande utan jag har istället fokuserat på det visuella i css och gjort det möjligt att fylla i fälten med text. Jag har även använt mig av java-script för att justera sidan mellan att visa inloggnings- respektive registrings-formuläret.
+    Under perioden mellan lektionen vecka 6 och lektionen vecka 8 har jag känt att det var viktigt att komma lite i fas med arbetet. Jag har därför påbörjat och nästintill slufört skapandet av en inloggningssida som också har möjlighet att fungera för att registerera sig eller skapa ett konto. Än så länge har jag inte löst eller undersökt möjlighten att använda mig av java-script för att göra inloggningen fullt fungerande utan jag har istället fokuserat på det visuella i css och gjort det möjligt att fylla i fälten med text. Jag har även använt mig av java-script för att justera sidan mellan att visa inloggnings- respektive registrings-formuläret. Under skapandet av detta var jag väldigt osäker på hur man skulle använda input-taggen tillsammans med placeholders och olika typer av input. Av denna anledning tog jag mykcet hjälp från en youtube video se länk.    
+    <a href="https://www.youtube.com/watch?v=h5MyIjZbCzc">https://www.youtube.com/watch?v=h5MyIjZbCzc</a> 
 
-    <img src="" alt="">
-    
+    Vad jag dock först insåg i slutet av denna genomgång var att man inte visade hur man skulle bära sig åt för att skapa den funktionalitet som registrerings-/inloggningsformuläret har på min sida. Av denna orska var jag tvungen att lösa detta själv.
+    Detta gjorde jag genom att studera liknand elösningar på problemet med hjälp av diverse olika youtube-genomgångar och artiklar på w3 schools och stack overflow. Genom dessa artiklar lärde jag mig även att använda mig av $-tecknet för att skriva java-koden på ett smidigare mer tidseffektivt sätt. Något som jag dock fortfarande är lite osäker på och behöver kolla upp nogare är hur man använder querySelectorAll för att markera flera objekt inom samma klass för att på så sätt optimera min kod rent platsmässigt då detta had egjort att jag sluppt skriva nästintill identisk kod flera gånger.
+
+Samtidigt som jag försökte lösa detta hade jag även stora problem med att imlementera den nya koden tillsammans med min tidigare kod eftersom jag inte använt klasser till alla olika objekt utan exempelvis stylat alla p-taggar och länkar på ett visst vis. Vidare hade jag också problem med att kombinera objektens position på rätt sätt för att få detta formuläret att bli responsivt och vra anpassat till såväl dator- som mobil-användare. Detta är något som jag ännu inte hunnit fokusera på utan planerar att lösa på lektionen nästkommandevecka på grund av den höga arbetsbelastningen i andra kurser. Detta är vidare också anledningen till att jag inte kunnat uppdatera min dokumentation så regelbundet utifrån de anteckningar och bilder som jag tagit under arbetets gång.
+
+I denna översta bilden tydliggörs hur jag efter att ha testat att följa denna videogenomgång inte lyckats lösa varken utseendet eller funktionaliteten för inloggningsformuläret. Genom kvalificerade gissningar kom jag fram till att orsaken måste vara bland annat att min css kod skriver över sig själv och därmed inte ger objekten de egenskaper och utseenden som de ska ha. Genom att gå igenom koden igen och systemeatisk undersöka vilka element som givits egenskaper flera gånger lyckades jag lösa utseendet för såväl mitt inloggningsformulär och min ursprungliga layout för denna sidan. Detta var dock ganska tidkrävande arbete där jag lätt gjorde misstag. Vidare var jag inte heller säker på att detta skulle lösa mina problem fullständigt eftersom jag även hade viktiga delar att förändra i den css-kod som jag redan skrivit. Genom att undersöka och testa mig fram har jag dock lyckats lösa dessa problem samtidgt som jag lyckats få den något problematiska koden för navigationsmenyn att fungera tillsammans med detta.
+
+
+<img src="img/problem_med_styling_av_inloggningsformulär.PNG" alt="">
+
+
+Nedan visas en bild från hur jag systematiskt genom att skapa ett helt nytt css dokument lyckats lösa problemen.
     <img src="img/inloggningsformulär_vars_style_och_js_inte_fungerar.PNG" alt="">
 
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
+
+    <img src="img/menyformuläret_som_nu_fungerar.PNG" alt="">
+
+    Ett stort problem som fortfarande kvarstår är dock anpassningen till olika skärmstorlekar. Något som jag med hjälp av media-queries planerar att lösa. Samtidigt känner jag ett stort behov av att inte bara följa en färdig genomgång utan att implementera tekniken för att skapa något eget. Detta är dock något som jag kommer behöva fundera på hur jag ska gå tillväga för att åstadkomma. Jag tror dock att inspiration är en viktig faktor i att lyckas skap en bra hemsida eftersom att jag själv saknar erferenhet i hur man kan ska skapa en layput som ser estestesk ut samtidigt som den är användarvänlig. Efter att ha tagit inspiration från andra sidor med liknande syfte kom jag exemeplvis fram till att det skulle se snyggare ut att fylla hela sidan med menyn som visas för mobiltelefoner när den aktiveras. Detta var en snabb justering men som fått följden att dela-knappen fått en felaktig position i z-led. Detta beskrivs mer tydligt längre ned i dokumentationen.
 
 
 
-     Efter att ha tagit inspiration från andra sidor med liknande syfte kom jag fram till att det skulle se snyggare ut att fylla hela sidan med menyn som visas för mobiltelefoner när den aktiveras.
-
-
-
-    Idag under lektionen har jag påbörjat skapandet av en av mina sub-hemsidor. Denna sidan är tänkt att vara en väder-sida där man ska kunna se värder för olika dagar på olika orter. För att detta ska kunna vara snyggt och tydligt har jag planerat att göra flera av den typen av ruta som jag påbörjat arbeta med. För att det ska bli extra tydligt har jag även valt att använda mig av linjer mellan informationen tillsammans med många symboler för att visa vädret. Här kan det dock finnas ett behov av att på något sätt, lik så som man gör med bilder, för att göra sidan anpassad för de som inte kan se symbolerna. 
+    Idag under lektionen har jag även påbörjat skapandet av en av mina andra sub-hemsidor. Denna sidan är tänkt att vara en väder-sida där man ska kunna se värder för olika dagar på olika orter. För att detta ska kunna vara snyggt och tydligt har jag planerat att göra flera av den typen av ruta som jag påbörjat arbeta med. För att det ska bli extra tydligt har jag även valt att använda mig av linjer mellan informationen tillsammans med många symboler för att visa vädret. Här kan det dock finnas ett behov av att på något sätt, lik så som man gör med bilder, för att göra sidan anpassad för de som inte kan se symbolerna. 
 
     <img src="img/botten_linjen_som_ska_bort.PNG" alt="Början på skapandet av väder-sidan">
 
@@ -297,10 +305,8 @@
     <img src="img/java-script_för_väder-sidan.PNG" alt="">
     <img src="img/bild_av_mer-information-sida.PNG" alt="">
     
-    Andra problem som lösts:
-
+   Ett problem som kvarstår till kommande lektion är att dela-menyn har fått en förändrad storlek på grund av någon feljustering i css. Samtidigt ligger den också i fel z-lager då den hamnar ovanför den huvudsakliga menyn när den aktiveras genom ett klick på burgaren i högra hörnet. Detta bör dock vara enkelt all lösa genom att justera z-index för objekten.
     <img src="img/dela-knappen_som_ligger_i_fel_z-lager.PNG" alt="">
-    <img src="img/problem_med_att_menyn_inte_tar_upp_hela_sidan.PNG" alt="">
 
 
 
