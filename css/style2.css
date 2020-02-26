@@ -25,13 +25,13 @@ body{
     "se se se se"
     "se se se se"
     "se se se se"
-    "a4 a4 a4 a3"
-    "a5 a5 a5 a6"
+    "a4 a4 a4 a4"
+    "a5 a5 a5 a5"
     "fo fo fo fo"
     ;
     height: 100vh;
     width: 100vw;
-    grid-template-rows: 10vh 67vw 45vw 20vh 1fr 1.5fr 1fr 30vh;
+    grid-template-rows: 10vh 67vw 45vw 20vh 1fr 95vh 95vh 30vh;
     grid-template-columns: 6fr 1fr 1fr 3fr;
     background: linear-gradient(rgb(0, 0, 0), rgba(174, 23, 166, 0.776));
     grid-gap: 0.7vh;
@@ -48,6 +48,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100vw;
 }
 
 .burger section{
@@ -101,6 +102,7 @@ body{
     transform: translateX(100%);
     transition: transform 0.5s ease;
     background: rgb(40, 201, 255);
+    z-index: 5;
 }
 
 .meny li{
@@ -254,7 +256,7 @@ a{
       right:0;
       left:0;
       margin:auto;
-      height:400px;
+      height: 400px;
       background-color: rgba(30,30,30, 0.9);
       grid-area: se;
       z-index: -1;
@@ -404,17 +406,49 @@ a{
     height: 20vh;
     width: 70vw;
     position: relative;
-    margin-top: 25vh;
-    background: rgba(22, 138, 80, 0.776);
+    top: 50%;
+    background: rgba(5, 27, 31, 0.776);
     z-index: -1;
 }
 
+.section_index{
+    height: 90vh;
+    width: 90%;
+    background: bisque;
+    margin-left: 5%;
+    z-index: -2;
+    margin-bottom: 5vh;
+}
 
+.section_index{
+grid-area: a4;
+}
+
+#section2_index{
+    height: 50vh;
+    width: 90%;
+    grid-area: a5;
+    background: bisque;
+    margin-left: 5%;
+    z-index: -2;
+}
+
+.section_index h1{
+    color: black;
+    margin: 5vh;
+}
+
+.section_image_index{
+    height: auto;
+    width: 100%;
+    margin-left: 0vw;
+
+}
 
 
 .wrapper{
-    height: 21vh;
-    width: 21vh;
+    height: 99px;
+    width: 99px;
     transform: rotate(45deg);
     position: sticky;
     bottom: 10vh;
@@ -427,15 +461,18 @@ a{
     "b7 b8 b9"
     ;
     position: sticky;
-    z-index: 2;
+    z-index: -1;
+}
 
+.wrapper_weather{
+    grid-area: s5;
 }
 
 .box{
     background: black;
     display: flex;
-    height: 50px;
-    width: 50px;
+    height: 33px;
+    width: 33px;
     overflow: hidden;  
     border-radius: 15%;
     justify-content: center;
@@ -474,15 +511,16 @@ a{
 
 .box p{
     transform: rotate(-45deg);
-    font-size: 17px;
+    font-size: 13px;
 }
 
 box p i{
     color: aliceblue;
+
 }
 
 .center-box-active p i{
-    font-size: 22px;
+    font-size: 15px;
 }
 
 .box:hover i{
@@ -511,77 +549,60 @@ box p i{
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;  
 
-    z-index: -1;
+    z-index: -2;
 }
 
 .item{
-    background-color: white;
+    background: linear-gradient(rgb(4, 5, 61), rgba(9, 73, 133, 0.776));;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .item1{
     grid-area: n04;
-    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
+
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .item2{
     grid-area: n08;
-    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
+
 }
 .item3{
     grid-area: n09;
-    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background: black;
 }
 .item4{
     grid-area: n10;
-    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
 }
 .item5{
     grid-area: n12;
-    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
 }
 .item6{
     grid-area: n13;
-    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background: rgb(10, 2, 54);
 }
 .item7{
     grid-area: n14;
-    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
 }
 .item8{
     grid-area: n16;
-    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
 }
 .item9{
     grid-area: n17;
-    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background: black;
 }
 .item10{
     grid-area: n18;
-    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
+
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .item11{
     grid-area: n22;
-    background-image: url(../img/gaelle-marcel-bay4zMs4zTc-unsplash.jpg);
+
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -593,12 +614,17 @@ box p i{
 
 }
 
-
+.item h2{
+    color: #f9f9f9;
+    transform: rotate(-45deg);
+    font-size: 17px;
+}
 
 
 h1{
-    color: rgb(184, 0, 0);
+    color: rgb(255, 255, 255);
     font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
 }
 
 h2{
@@ -610,6 +636,9 @@ p{
     color: rgb(250, 250, 250);
     font-family: 'Titillium Web', sans-serif;
     font-size: 1.4vh;
+}
+
+.login-reg-panel p{
     padding-top: 5px;
     padding-bottom: 15px;
 }
@@ -653,13 +682,17 @@ p{
     display: grid;
     grid-template-areas:
     "na na na na"
-    "se s1 s2 s3"
-    "b1 b1 b1 b1"
+    "s1 s1 s1 s1"
+    "s2 s2 s2 s2"
+    "s3 s3 s3 s3"
+    "s4 s4 s4 s4"
+    "s5 s5 s5 s5"
+    "s6 s6 s6 s6"
     
     ;
     height: 100vh;
     width: 100vw;
-    grid-template-rows: 10vh 60vh;
+    grid-template-rows: 10vh 70vh 70vh 70vh 70vh 70vh 70vh;
     grid-template-columns: 100vw 1fr 1fr 1fr;
    
     grid-gap: 0.7vh;
@@ -671,28 +704,86 @@ p{
 
 }
 
+@media screen and (min-width: 400px) {
+
+    .gridwrapper-weather{
+        display: grid;
+        grid-template-areas:
+        "na na na na"
+        "s1 s1 s2 s2"
+        "s3 s3 s4 s4"
+        "s5 s5 s6 s6"
+        
+        
+        ;
+        height: 100vh;
+        width: 100vw;
+        grid-template-rows: 10vh 70vh 70vh 70vh 70vh 70vh 70vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+       
+        grid-gap: 0.7vh;
+        overflow-x: scroll;
+        overflow-y: scroll;
+        position: fixed;
+        background: linear-gradient(rgb(0, 0, 0), rgba(174, 23, 166, 0.776));
+        z-index: 1;
+    }
+
+    .card{
+        grid-area: s1;
+        height: 60vh;
+        width: 100%;
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        transform: translateX(-50%,-50%);
+        z-index: -3;
+    
+    }
+
+}
+
 
 
 .card{
-    grid-area: se;
-    height: 55vh;
-    width: 55vw;
-    background: wheat;
+    grid-area: s1;
+    height: 60vh;
+    width: 90%;
     position: absolute;
     top: 20%;
     left: 5%;
     transform: translateX(-50%,-50%);
+    z-index: -3;
 
 }
 
 .card2{
-    grid-area: s1;
+    grid-area: s2;
 }
+
+.card3{
+    grid-area: s3;
+}
+
+.card4{
+    grid-area: s4;
+}
+
+.card5{
+    grid-area: s5;
+}
+
+.card6{
+    grid-area: s6;
+}
+
+
 
 .card .front{
     width: 100%;
     height: 100%;
-    background: rgb(121, 121, 185);
+    background-image: url(../img/mathieu-bigard-OIautOqmEGg-unsplash.jpg);
+    background-size: cover;
     padding: 5vh;
     box-sizing: border-box;
     transition: .5s;
@@ -808,6 +899,6 @@ p{
     color: white;
 }
 
-.fa{
+.forecast .fa{
     padding-right: 2vw;
 }
