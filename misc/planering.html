@@ -284,8 +284,6 @@ Nedan visas en bild från hur jag systematiskt genom att skapa ett helt nytt css
 
     Ett stort problem som fortfarande kvarstår är dock anpassningen till olika skärmstorlekar. Något som jag med hjälp av media-queries planerar att lösa. Samtidigt känner jag ett stort behov av att inte bara följa en färdig genomgång utan att implementera tekniken för att skapa något eget. Detta är dock något som jag kommer behöva fundera på hur jag ska gå tillväga för att åstadkomma. Jag tror dock att inspiration är en viktig faktor i att lyckas skap en bra hemsida eftersom att jag själv saknar erferenhet i hur man kan ska skapa en layput som ser estestesk ut samtidigt som den är användarvänlig. Efter att ha tagit inspiration från andra sidor med liknande syfte kom jag exemeplvis fram till att det skulle se snyggare ut att fylla hela sidan med menyn som visas för mobiltelefoner när den aktiveras. Detta var en snabb justering men som fått följden att dela-knappen fått en felaktig position i z-led. Detta beskrivs mer tydligt längre ned i dokumentationen.
 
-
-
     Idag under lektionen har jag även påbörjat skapandet av en av mina andra sub-hemsidor. Denna sidan är tänkt att vara en väder-sida där man ska kunna se värder för olika dagar på olika orter. För att detta ska kunna vara snyggt och tydligt har jag planerat att göra flera av den typen av ruta som jag påbörjat arbeta med. För att det ska bli extra tydligt har jag även valt att använda mig av linjer mellan informationen tillsammans med många symboler för att visa vädret. Här kan det dock finnas ett behov av att på något sätt, lik så som man gör med bilder, för att göra sidan anpassad för de som inte kan se symbolerna. 
 
     <img src="img/botten_linjen_som_ska_bort.PNG" alt="Början på skapandet av väder-sidan">
@@ -311,7 +309,37 @@ Nedan visas en bild från hur jag systematiskt genom att skapa ett helt nytt css
 
 
     <h3>Lektion vecka 9</h3>
-    <!-- Fyll på med dokumentation här. -->
+
+    Mitt främsta fokus under lektionstillfället, och tiden fram tills lektionen vecka 10, har varit att färdigställa de sidor som jag redan skapat. Till min hjälp har jag haft ett skissblock som hjälp mig mycket under planeringen och designen av siornas utseende. När jag försökt implementera idéer på sidan har jag dock mötts av flertalet problem och jag har därför ofta behövt tänka om och förändra idéerna och hur jag skriver koden för att skapa det önskade utseendet.
+
+    Under procesen där sidan ska anpassa för både dator- och mobil-användare har detta varit extra tydligt. I många fall har stylingen i css behövts förändras och jag har haft svårt att studera effekterna för båda skärmbredderna samtidigt. För att förenkla arbetet för mig har jag använt mig av live-server för att visa dator-layoutens utseende samtidgt som jag, med hjälp av live-server funktionerna som ruby erbjuder, även visat hemsidan på min egna telefon. Vidare har jag varit tvugen att använda mig mycket av media queries för att göra skiljande utseenden möjliga. Jag har i de flesta fall utgått från mobil-layouten, men det förekommer också fall där jag först gjort pc-layouten för att sedan lägga in detta innehållet i en media-querie för när skärmbredden överstiger ett visst pixel-värde. 
+
+    Ett exempel på detta är hur jag under skapandet av en mobilanpasad version av mitt inloggningsformulär lade stylingen som jag redan skrivit i en media-querie medan jag designade utseendet för den mobilanpassade versionen. Detta fungerade till en början bra då formuläret fick det önskade utseendet. Vad jag dock märkte var att jag hade lagt in kod som även förändrade egenskaperna för det som låg i media-querien. För att på ett enkelt sätt lösa detta problemet lade jag in detta inehållet i en media-querie fast med en begränsing för maximal skärmbredd. Detta innbar att jag tvingades använda mig av en kod där vissa delar var samma för såväl den mobil-anpassade som för den datoranpassade versionen. Detta är något som jag kan lösa genom att lägga dessa delar utanför media-queriesen, men eftersom detta innebär att strukturen i mitt css-dokument skulle bli svårare att hantera och läsa har jag inte lagt något fokus på detta än. Jag tror dock att det finns vikt i att göra detta för att minska antalet rader kod och förenkla läsbarheten (förutsatt att det läggs fokus på en god struktur).
+
+    <img src="img/problem_when_screen_width=792.PNG" alt="">
+
+    På bilden ovan visas hur utseendet påverkades då viss css-kod ämnad till den mobil-anpassade layouen även påverkade layouten och stylingen för den dator-anpassade varianten. 
+
+    <img src="img/användning av media querie.PNG" alt="">
+
+    Under lektionstillfället har jag även färdigställt mitt diamant-grid-system som fungerar som en genväg till en specefik del av sidan där man kan hitta information om just detta område man valt. Jag har av denna anledning valt att länka till id på samma sida där denna informationen finns. Vidare har jag lagt länken på hela diven för att föenkla klick och jag har gjort det visuellt tydligt vad man klickar på genom att byta färg på elementet och den text det innehåller när man hovrar över det. Samtidgt har jag också använt mig av linear-gradient för att ge en unik look till menyn. Jag tyckte personligen att detta passade bättre än radial-gardient eller varianter med mer än två färger. 
+
+    <img src="img/utseende_för_diamant_grid.PNG" alt="">
+    
+    Under denna processen hade jag dock stora problem med att placera detta div-elementet i z-led. Det placerades nämligen lätt ovanför mitt huvudskaliga menysystem, men när jag justerade detta hamnade det antingen ovanför mina social-media-share-buttons eller under något annat element som gjorde att klickande på länkarna blev omöjligt. Detta är något som jag tar med mig till kommande lektion för att lösa.
+
+    <img src="img/diamantgrid_ovanför_huvudmeny.PNG" alt="">
+
+    I övrigt har jag också löst problem som med snapapsning till skärmstorlek när det kommer till vädersidan.
+
+
+    Jag har också påbörjat färdigtsällandet av min snabb-boknings-meny som endast består av html och css. Även här hade jag dock mindre problem som jag tvingats att hantera och försöka att lösa.
+
+    Till kommande lektion känner jag att jag behöver fokusera ytteliggare på dessa saker samt att färdigställa denna dokumentationen från de moment som jag arbetat med hemma innan detta nu kommande lektionstillfälle vecka 10.
+
+
+
+
 
     <h3>Lektion vecka 10</h3>
     <!-- Fyll på med dokumentation här. -->
