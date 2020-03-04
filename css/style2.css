@@ -14,6 +14,7 @@ body{
       height:100vh;
       min-height:550px;
       position: relative;
+ 
 
   }
 
@@ -38,6 +39,7 @@ body{
     overflow-x: hidden;
     overflow-y: scroll;
     position: fixed;
+   
 }
 
   .nav{
@@ -92,6 +94,7 @@ body{
 }
 
 .diamond-grid{
+    position: absolute;
     z-index: 1;
 }
 
@@ -598,13 +601,75 @@ video{
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.808);
     -webkit-appearance: button;
     border: none;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Muli', sans-serif;
     margin-bottom: 10px;
 }
 
-option{
-    width: 80px;
+.datum input{
+    background:  rgba(29, 113, 190, 0.849);
+    color: whitesmoke;
+    padding-left: 30vw;
     height: 40px;
+    font-size: 15px;
+    width: 40vw;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.808);
+    border: none;
+    font-family: 'Muli', sans-serif;
+    margin-bottom: 10px;
+}
+
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button { 
+    display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: transparent;
+    position: relative;
+    right: 0;
+    height: 35px;
+    width: 30px;
+}
+
+option{
+    width: 300px;
+    height: 60px;
+    font-size: 20px;
+    padding: 10px;
+    font-family: 'Muli', sans-serif;
+}
+
+.datum:before{
+    content: '\f13a';
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    text-align: center;
+    line-height: 40px;
+    color: #444444;
+    left: calc(100% - 40px - 3vh);
+    width: 40px;
+    height: 40px;
+    background: rgb(79, 147, 211);
+    pointer-events: none;
+}
+
+.datum:after{
+    content: 'Välj destination';
+    font-family: 'Muli', sans-serif;
+    position: absolute;
+    text-align: left;
+    line-height: 40px;
+    color: whitesmoke;
+    left: 3vh;
+    width: 18.5vw;
+    height: 40px;
+    background: rgb(79, 147, 211);
+    pointer-events: none;
+    padding-left: 20px;
+    font-size: 15px;
 }
 
 .choice:before{
@@ -633,16 +698,16 @@ option{
     line-height: 40px;
     color: whitesmoke;
     left: 3vh;
-    width: 17vw;
+    width: 20vw;
     height: 40px;
     background: rgb(79, 147, 211);
     pointer-events: none;
     padding-left: 20px;
-    font-size: 12px;
+
 }
 
-.choice::after{
-    font-family: "Titillium Web', sans-serif";
+.choice:after{
+    font-family: 'Muli', sans-serif;
     position: absolute;
     text-align: left;
     line-height: 40px;
@@ -653,7 +718,7 @@ option{
     background: rgb(79, 147, 211);
     pointer-events: none;
     padding-left: 10px;
-    font-size: 2.8vw;
+    font-size: 15px;
 }
 
 .hur:after{
@@ -732,7 +797,7 @@ grid-area: a4;
         "b4 b5 b6"
         "b7 b8 b9"
         ;
-        z-index: 0;
+        z-index: 2;
     }
 
     .box p{
@@ -742,7 +807,9 @@ grid-area: a4;
 }
 
 
-
+.wrapper-active{
+    display: none;
+}
 
 
 .wrapper_weather{
@@ -829,6 +896,10 @@ box p i{
     ;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;  
+}
+
+.diamond-grid-active{
+    display: none;
 }
 
 .item{

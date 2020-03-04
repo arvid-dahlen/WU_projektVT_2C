@@ -5,14 +5,17 @@ const Slide = ()=>{
     const nav    = document.querySelector('.meny');
     const navLinks = document.querySelectorAll('.list-item-div')
     const click = document.querySelector('.header')
+    const diamondGrid = document.querySelector('.diamond-grid')
+    const shareButtons = document.querySelector('.wrapper')
 
     burger.addEventListener('click',() => {
         nav.classList.toggle('nav-active');   
+        burger.classList.toggle('toggle');
+        shareButtons.classList.toggle('wrapper-active')
+        if (diamondGrid != null)
+        diamondGrid.classList.toggle('diamond-grid-active');
         
-    burger.classList.toggle('toggle');
-
-
-    navLinks.forEach((link, index) => {
+        navLinks.forEach((link, index) => {
         if(link.style.animation){
             link.style.animation = ''
         } else { link.style.animation = `Fade 0.5s ease forwards ${index / 10 + 0.35}s`;
