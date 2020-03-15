@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Min sida</title>
+    <link rel="icon" href="img/type_logo.png" type="image/png" sizes="26x26">
     <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js" ></script>
-
+    <script src="https://kit.fontawesome.com/454479a24a.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- <section>
@@ -22,23 +23,24 @@
 
         <nav class="nav">
             <a href="index.html"><div class="logo"><img class="logo" src="img/type_logo.png" alt="Logga"></div></a>    
-            <a class="icon" href="min_sida.html"><p><i id="user_logo_index" class="fa fa-user"></i>Logga in</p></a>
+            <a class="icon" href="min_sida.html"><p class="icontext"><i id="user_logo_index" class="fa fa-user"></i> Logga in</p></a>
         
             <div class="burger">
-                <section class="line1"> </section>
-                <section class="line2"> </section>
-                <section class="line3"> </section>
+                <div class="line1"> </div>
+                <div class="line2"> </div>
+                <div class="line3"> </div>
             </div>
         
             <ul class="meny"> 
-                <a href="index.html"><div class="list-item-div" id="no_shadow"><li class="list-item"> <p class="list_stil">Sida 1</p> </li></div></a> 
-                <a href="#"><div class="list-item-div"><li class="list-item"><p class="list_stil">Sida 2</p></li></div></a>
-                <a href="#" target="blank"> <div class="list-item-div"><li class="list-item"><p class="list_stil">Sida 3</p> </li></div></a>
-                <a href="weather.html"><div class="list-item-div"><li class="list-item"> <p class="list_stil">Väder</p></li></div></a>
+                <a href="index.html"><div class="list-item-div" id="no_shadow"><li class="list-item"> <p class="list_stil"><i class="fas fa-home"></i> Hem</p> </li></div></a></li> 
+                <a href="erbjudanden.html"><div class="list-item-div"><li class="list-item"><p class="list_stil"> Erbjudanden</p></li></div></a>
+                <a href="min_sida.html" target="blank"> <div class="list-item-div"><li class="list-item"><p class="list_stil">Sida 3</p> </li></div></a>
+                <a href="weather.html"><div class="list-item-div"><li class="list-item"> <p class="list_stil"><i class="fas fa-cloud-sun-rain"></i> Väder</p></li></div></a>
+            </ul>
         </nav>
 
 
-        <div class="wrapper">
+        <div class="wrapper wrapper_minsida">
             <div class="single-items">
                 <a href="#"><div class="box b1"><p><i class="fa fa-facebook"></i></p></div></a>
                 <a href="#"><div class="box b2"><p><i class="fa fa-twitter"></i></p></div></a>
@@ -79,8 +81,8 @@
                     <h2>LOGGA IN</h2>
                     <input type="text" placeholder="E-post">
                     <input id="password_check" type="password" placeholder="Lösenord">
-                   <input type="button" value="Logga in" onclick="test_str()"></a>
-                    <a class="mindre_link_text" href=""></a>Glömt lösenord?</a>
+                   <input type="button" value="Logga in" onclick="test_str()">
+                    <a class="mindre_link_text" href="">Glömt lösenord?</a>
                 </div>
                 <div class="register-show">
                     <h2>SKAPA KONTO</h2>
@@ -92,23 +94,6 @@
             </div>
         </div>     
     </div>  
-
-
-
-
-
-
-        </div>
-
-    </div>
-
-    </div>
-
-    
-    
-
-
-
 <script src="js/script.js"></script>
 </body>
 </html>

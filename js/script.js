@@ -109,6 +109,98 @@ function test_str() {
 } 
 
 
+
+
+
+  
+const header = document.querySelector(".nav");
+const sectionOne = document.querySelector(".img-sektion");
+
+const sectionOneOptions = {
+  rootMargin: "-200px 0px 0px 0px"
+};
+
+const sectionOneObserver = new IntersectionObserver(function(
+  entries,
+  sectionOneObserver
+) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      header.classList.add("nav-scrolled");
+    } else {
+      header.classList.remove("nav-scrolled");
+    }
+  });
+},
+sectionOneOptions);
+
+sectionOneObserver.observe(sectionOne);
+
+
+const wrapper = document.querySelector(".wrapper");
+const sectionTwo = document.querySelector(".footer");
+const shareButton = document.querySelector('.center-box');
+const shareButton1 = document.querySelector('.b1');
+const shareButton2 = document.querySelector('.b2');
+const shareButton3 = document.querySelector('.b3');
+const shareButton4 = document.querySelector('.b4');
+const shareButton6 = document.querySelector('.b6');
+const shareButton7 = document.querySelector('.b7');
+const shareButton8 = document.querySelector('.b8');
+const shareButton9 = document.querySelector('.b9');
+
+const sectionTwoOptions = {
+  rootMargin: "-200px 0px 0px 0px"
+};
+
+const sectionTwoObserver = new IntersectionObserver(function(
+  entries,
+  sectionTwoObserver
+) {
+  entries.forEach(entry => {
+  
+    if (entry.isIntersecting) {
+      wrapper.classList.add("fix-buttons");  
+      shareButton.classList.add('center-box-active');
+        shareButton1.classList.add('box-active');
+        shareButton2.classList.add('box-active');
+        shareButton3.classList.add('box-active');
+        shareButton4.classList.add('box-active');
+        shareButton6.classList.add('box-active');
+        shareButton7.classList.add('box-active');
+        shareButton8.classList.add('box-active');
+        shareButton9.classList.add('box-active');
+        if(document.querySelector("#icon").className == 'fa fa-share-alt'){
+            document.querySelector("#icon").className = "fa fa-times";
+        }
+        else{   
+            document.querySelector("#icon").className = "fa fa-share-alt";
+        }
+
+    } 
+    else {
+        wrapper.classList.remove("fix-buttons");
+        shareButton.classList.remove('center-box-active');
+        shareButton1.classList.remove('box-active');
+        shareButton2.classList.remove('box-active');
+        shareButton3.classList.remove('box-active');
+        shareButton4.classList.remove('box-active');
+        shareButton6.classList.remove('box-active');
+        shareButton7.classList.remove('box-active');
+        shareButton8.classList.remove('box-active');
+        shareButton9.classList.remove('box-active');
+        
+    }
+    
+    
+  });
+},
+sectionTwoOptions);
+
+sectionTwoObserver.observe(sectionTwo);
+
+
+    
 const showBack = ()=>{
     document.querySelector('.more').addEventListener('click',() =>{
         document.querySelector('.back').classList.toggle('back-active');
@@ -124,5 +216,8 @@ const showFront = ()=>{
     });
 }
 showFront(); 
+
+
+
 
 
