@@ -174,7 +174,7 @@ const sectionTwoObserver = new IntersectionObserver(function(
             document.querySelector("#icon").className = "fa fa-times";
         }
         else{   
-            document.querySelector("#icon").className = "fa fa-share-alt";
+            document.querySelector("#icon").className = "fa fa-times";
         }
 
     } 
@@ -188,7 +188,9 @@ const sectionTwoObserver = new IntersectionObserver(function(
         shareButton6.classList.remove('box-active');
         shareButton7.classList.remove('box-active');
         shareButton8.classList.remove('box-active');
-        shareButton9.classList.remove('box-active');
+        shareButton9.classList.remove('box-active');  
+        document.querySelector("#icon").className = "fa fa-share-alt";
+    
         
     }
     

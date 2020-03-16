@@ -306,6 +306,7 @@ Nedan visas en bild från hur jag systematiskt genom att skapa ett helt nytt css
    Ett problem som kvarstår till kommande lektion är att dela-menyn har fått en förändrad storlek på grund av någon feljustering i css. Samtidigt ligger den också i fel z-lager då den hamnar ovanför den huvudsakliga menyn när den aktiveras genom ett klick på burgaren i högra hörnet. Detta bör dock vara enkelt all lösa genom att justera z-index för objekten.
     <img src="img/dela-knappen_som_ligger_i_fel_z-lager.PNG" alt="">
 
+    Detta problemet löste jag först under ett senare lektionstilfälle. Eftersom att z-index inte fungerade som det skulle anväde jag mig istället av display: none;och fick på så sätt skapa en ny klass för såväl  
 
 
     <h3>Lektion vecka 9</h3>
@@ -324,13 +325,27 @@ Nedan visas en bild från hur jag systematiskt genom att skapa ett helt nytt css
 
     Under lektionstillfället har jag även färdigställt mitt diamant-grid-system som fungerar som en genväg till en specefik del av sidan där man kan hitta information om just detta område man valt. Jag har av denna anledning valt att länka till id på samma sida där denna informationen finns. Vidare har jag lagt länken på hela diven för att föenkla klick och jag har gjort det visuellt tydligt vad man klickar på genom att byta färg på elementet och den text det innehåller när man hovrar över det. Samtidgt har jag också använt mig av linear-gradient för att ge en unik look till menyn. Jag tyckte personligen att detta passade bättre än radial-gardient eller varianter med mer än två färger. 
 
+    När man markerar någon av dessa ville jag också att det skulle ges visuell feedback genom att ändra färg på den ruta man hovrar över. Problemet med detta var dock att detta gjorde att även de andra rutorna som sakanr länkar kunde markeras. Detta löste jag genom att längre ned i dokumentet (så att det tidigare skrivs över) ge styling för när just dessa element hovras över. I och med detta passade jag även på att med hjälp av media-queries förändra storlek på texten och grid-systemet baserat på skärmvidd. För att placera elemntet i mitten av sidan positionerade jag det relativt till dess närmasta förälder och valde, istället för att använda mig av display: flex på något sätt för att centrera inehållet, att sätta avstånd från vänster till differensen mellan sidans bredd och elementets bredd delat på två för att centrarear lementet. Se bild! 
+
+    <img src="img/placering_av_diamond_grid.PNG" alt="">
+
+    <img src="img/diamond-grid-size.PNG" alt="">
+
+    <img src="img/mittenblocken_som_också_markeras.PNG" alt="">
+
     <img src="img/utseende_för_diamant_grid.PNG" alt="">
     
-    Under denna processen hade jag dock stora problem med att placera detta div-elementet i z-led. Det placerades nämligen lätt ovanför mitt huvudskaliga menysystem, men när jag justerade detta hamnade det antingen ovanför mina social-media-share-buttons eller under något annat element som gjorde att klickande på länkarna blev omöjligt. Detta är något som jag tar med mig till kommande lektion för att lösa.
+    Under denna processen hade jag dock stora problem med att placera detta div-elementet i z-led. Det placerades nämligen lätt ovanför mitt huvudskaliga menysystem, men när jag justerade detta hamnade det antingen ovanför mina social-media-share-buttons eller under något annat element som gjorde att klickande på länkarna blev omöjligt. Detta är något som jag tar med mig till kommande lektion för att lösa. 
+    Detta problemet löste jag först under ett senare lektionstilfälle. Eftersom att z-index inte fungerade som det skulle anväde jag mig istället av display: none;och fick på så sätt skapa en ny klass för såväl social-media-share-buttons som detta div-element. Genom att förändra klassen för objekten vid klick på burgaren kunde jag enkelt göra detta.
 
     <img src="img/diamantgrid_ovanför_huvudmeny.PNG" alt="">
 
-    I övrigt har jag också löst problem som med snapapsning till skärmstorlek när det kommer till vädersidan.
+    Vad jag dock insåg var att detta gjorde att java-scriptet helt slutade att fungera på de andra två sidorna som saknade diamantgridet. På grund av att man inte kan ta classList av null. Jag behövde därför lägga till if-testet if (diamondGrid != null) så att jag kunde undvika att göra detta och därmed hindra koden från att fungera. 
+
+    <img src="img/menyn_som_slutat_fungera_pga_avsakand_av_diamond_grid.PNG" alt="">
+
+
+    I övrigt har jag också löst problem som med anpassning till skärmstorlek när det kommer till vädersidan. Detta genom att använda mig av många olika media-queries och på så sätt förändra grid-template-areas.
 
 
     Jag har också påbörjat färdigtsällandet av min snabb-boknings-meny som endast består av html och css. Även här hade jag dock mindre problem som jag tvingats att hantera och försöka att lösa.
@@ -344,10 +359,70 @@ Nedan visas en bild från hur jag systematiskt genom att skapa ett helt nytt css
     <h3>Lektion vecka 10</h3>
     <!-- Fyll på med dokumentation här. -->
 
+    Under detta lektionstillfället arbetade jag vidare med skapandet av min snabb-boknings-meny. Eftersom jag redan tidgare använt mycket java-script valde jag vid detta tilfället att istället lära mig mer om input-fält och selection-elementet och hur dessa kan användas i detta syftet (alltså för att ksap drop-down menyer). Jag hade till en början problem med hur jag skulle styla dessa till de utseende som jag eftersträvade men efter att ha kollat på olika youtube tutorials och w3 schools lärde jag mig att man kunde styla selection-elementet direkt medans input type="date"> inte lämpade sig lika mycket för detta. På mobilenheter visas dock inte samma utseende som på datorn och här krävs därför ingen mer styling än den som jag lykcats åstadkomma. Ska man dock styla utseendet på drop-down-menyn som visas på datorn krävs dock att man stylar väldigt många olika element. Den består nämligen inte enbart av ett utan av väldigt många små delelement som alla kan stylas i någon mån. Det är dock lite komplicerat och jag överväger därför att helt ersätta den med en egenskapd dropdown-meny. Detta skulle dock kräva väldigt mycket arbete och då jag upplever att jag redan använt mycket java-script samtidgt som css-koden som skulle krävas skulle vara simpel upllever jag inte att detta är något som jag ska fokusera på. 
+
+    <img src="img/problem_med_utseende_på_mobilenheter.PNG" alt="">
+
+    Jag förstod att jag enkelt kunnde styla storlek och färg på såväl selection-elementet och options-elementen som visas vid klick på selection-elementet. Eftersom ajg inte var helt nöjd med detta utseendet valde jag samtidgt också att använda mig av ::before för att skapa ett annat övertäckande element med beskrivning av innehållet. Jag passade Utöver detta på att göra en egengjord knapp för att visa options genom att använda mig av ::after. Jag lärde mig även här att använda symboler på ett nytt sätt. Tidgare hade jag enbart använt mig av typen 'i class="fas fa-cloud-sun-rain"', men nu fick jag istället testa på att använda mig av ikoner direkt i css med hjälp av unicode. Se bild.
+
+    <img src="img/användning_av_ikon_i_css.PNG" alt="">
+
+    Jag ersätte i ett senare stadie denna symbolen med en annan symbol. Under skapandet av dessa hade jag samtidgt mindre problem med positioneringen. Jag tyckte därför att det var enklast att göra det med hjälp av position: absolute; så att objekten positioneras relativt till dess närmsat förälder och sedan ge objekten den positionering som jag ville med hjälp av left: respektive right:.  Jag hade dock mindre proble med att innehållet inte fick plats vilet jag åtgärdade genom att göra elementet något större. Se bilder nedan.
+
+
+    <img src="img/inehåll_som_placeras_felaktigt.PNG" alt="">
+    <img src="img/placering_rätt.PNG" alt="">
+
+    <img src="img/use_of_unicode.PNG" alt="">
+
+    Samtidgt fick jag också använda mig av media-queries för att jusetera innehållets storlek beroende på skärmstorlek. <img src="img/media-querie_stylar_textstorlek.PNG" alt="">
+
+    Eftersom jag strävade efter att positionera menyrutan så att denn låg lite över bilden på huvudsidan var jag också tvungen att förändra positioneringen av menyrutan med hjälp av media-queries. Även denna positionerade jag relativt till dess närmaste förälder och jag kunde därmed enbart justera höjden från toppen för att lösa mitt problem.
+
+    <img src="img/problem_placering_meny.PNG" alt="">
+
+    <img src="img/placering_av_menyruta_i_höjdled.PNG" alt="">
+
+
+    För att slutföra stylingen av dessa menyer ville jag också ha en placeholder. Vad jag insåg var att man inte på ett enklet sätt kunde åstadkomma detta som i input-fälten. Istället fick jag göra första objektet till en placeholder. Då gick ju denna givetvis också att välja vilket jag tyckte var fult och ville undvika. Genom diverse olika sökningar kom jag fram till att jag kunde lösa problemet genom att sätta denna option till "disabled selected hidden" vilket gjorde att detta valet först var valt men sedan inte kan väljas i drop-down-menyn igen.
+
+    <img src="img/problem_med_att_placeholern_går_att_välja.PNG" alt="">
+
+
     <h3>Lektion vecka 11</h3>
     <!-- Fyll på med dokumentation här. -->
 
-    https://jsfiddle.net/19bwe33x/17/
+    Under detta lektionstillfället påbörjade jag mitt arbete med att skapa en footer där jag har diverse olika länkar som leder till olika delar på webbplatsen. Jag har främst länkat till speciella id:n för att komma direkt till en viss del sidorna, men jag har också länkat till html dokument. Som med resten av sidan har det varit viktigt för mig att den är anpassad till olika skärmstorlekar. Detta har jag åstadkommit med hjälp av media-queries. Eftersom jag började med att skapa footern för dator-layouten använde jag mig denna gången av "@media screen and (max-width: 750px){}" för att ge olika utseenden beroende på skärmstorlek. Jag förstår givetvis att detta i någon mån strider med konceptet mobile-first, men då det enda som jag förändrar med hjälp av denna media-querien är grid-layouten och textstorlek blir den enda konsekvensen att jag sparar lite tid i mitt kodande då jag undviker att ändra koden i efterhand. Orsaken till att jag gjorde på detta viset var att jag inte had emöjlighet att ansluta min telfon till skolans internet och därmed koppla upp mig för att se förändringarna direkt. De möjligheter som finns på datorn att visa sidan i mobilformat (exemeplvis i inspektorn) tycker jag fungerar mindre bra samtidgt som de ofta missar de problem som uppkommer när sidan visas på en faktisk mobilenhet.<br>
+
+    Ett exempel på detta var input-taggen (input type="date" id="date") som ges styling automatiskt på telefoner med IOS. Jag testade nämligen detta med olika webbläsare på min telefon och kom fram till att felet kavarstod i vilket fall. Jag utförde då lite varierade sökningar på problemet och kom fram till att lösningen skulle vara att ta bort border-radius och sätta -webkit-appearence till none. På så sätt undvek jag den stylingen som annars skulle ges där storlek förändras och exempelvis input-fält ges rundade kanter och dropshadows. Detta problemet märkte jag också gällande input-typen button, password och text. I detta fallet tyckte jag dock att stylingen passade bra och därmed inte var ett problem. Om så var fallet hade jag även kunnat ge stylingen ovan till dessa objekten. Nu i efterhand funderar jag snarare på att ge en liknande styling till objekten när de visas på datorn, men jag har kommit fram till att de mer fyrkantiga input-fälten passar bättre tillsammans med de mer fyrkantiga panelerna på dator-versionen medan de rundade passar bättre med de rundade panelerna på mobilsidan.
+
+    <img src="" alt="">
+    <img src="" alt="">
+
+    Under lektionen då jag arbetade med footern lade jag inte bara fokus på att göra layouten för denna samt lägga till ikoner och styling för när man hovrar över länkarna. Istället försökte jag också utveckla mitt java-script genom att hitta en motsats till position: stickey;. När man sätter ett objekts position till stikey gör detta att objektet positioneras relativt till en speciell vertikal punkt där det istället positioneras fixed till viewport. Jag ville till min footer åsatdkomma det motsatta med mina social-media-share-buttons som jag ville skulle vara fixed till viewport tills man kom ned till footern då de skulle positionera sig längst upp på footern (alltså relativt till denna). 
+
+    För att lösa detta kollade jag inledningsvis på många olika varianter av kod som var lättförståeliga och lätta att implementera samt korrigera för att passa till just mitt syfte. Jag insåg dock att dessa alla krävde varianter av jquery eller bootsrap (vilket jag är väldigt osäker på då vi aldrig gått igenom dessa) för att fungera. Istället fick jag därför kolla vidare på olika genomgångar och idéer för att lösa detta.<br>
+
+    Exempel på kod som krävde tilläg: 
+    <img src="img/kod_som_kräver_variant_av_jquery.PNG" alt="">
+
+    Inspirationen togs från koden nedan:
+    <a href=" https://jsfiddle.net/19bwe33x/17/"></a>
+    
+    Genom att kolla på en video genomgång lärde jag mig att det inte finns något sådant kommando utan jag fick istället använda mig av en typ av IntersectionObserver för att se om objekten intersectar. Med hjälp av ett if-test kunde jag påsåvis förändra klassen för mina social-media-share-buttons. Genom att ha olika sätt att positionera dem i de två olika klasserna (fixed respektive absolute) lyckades jag med lite om och men göra detta. När jag lärt mig tekniken passade jag även på att implementera detta för min nav-bar och på så sätt byta färg på den efter att man scrollat ned en bit på sidan. Detta gjorde också att färgkontrasten mellan olika objekt på sidan förbättrades. 
+
+    Jag fick även lägga till ett extra if-test för att kunna se till att menyn var aktiverad när man visade footern. Detta krävde egentligen bara samma kod som jag använt ovan för att göra detta vid ett klick på dela-knappen. Viktigt att anmärka var dock att denna koden behövde ligga på rätt plats och därmed vara nästlad i det föregående if-testet. På så sätt kunde jag även justera klassen för de små div-elementen i menyn så att de visas när footern kommer in i viewporten. För att få detta att fungera var jag vidare också tvungen att använda mig av add samt remove på klasserna istället för toggle eftersom detta gjorde att menyn annars aktiverades direkt när man gick in på sidan. Vilket jag först märkte efter att ha testat detta.
+
+    <img src="img/if-test_som_ska_vara_i_det_andra_if-testet.PNG" alt="">
+
+    <img src="img/javacript_som_fyller_funktion_bil_1.PNG" alt="">
+
+    <img src="img/javacript_som_fyller_funktion_bil_2.PNG" alt="">
+
+
+
+
+
 
     <h3>Lektion vecka 12</h3>
     <!-- Fyll på med dokumentation här. -->
@@ -355,10 +430,46 @@ Nedan visas en bild från hur jag systematiskt genom att skapa ett helt nytt css
     <h2>4. Testning</h2>
     <!-- Testa i Chrome + Firefox eller Safari (på både dator och mobil). Skiljer sig resultatet? Har du behövt anpassa ditt kod/innehåll efter de olika webbläsarna? Hur gick valideringen? Vad säger contrastchecker.com om text/bakgrundsfärg? Hur ser resultatet ut på en riktig telefon? -->
 
+
+    Under arbetet har jag hela tiden, medan jag gjort förändringar, studerat effekten både på datorn med hjälp av liveserver och på telefonen när jag kunnat nasluta dessa till samma nätverk. Det finns därför många saker som jag tagit upp i dokumentationen ovan som har med testningen att göra som inte kommer att tas upp igen här. 
+
+    Under lektionstilfället fick jag dock möjlighet att köra igenom mina html-dokument och min css-kod i validatorer för att hitta eventuella problem. Samtidgt har jag också testat att ladda ned mina filer via github för att se om jag av missatg använt några absoluta länkar. Det visade sig att jag dock inte vara någon skillnad mellan de två varianterna då de öppnats i webbläsaren och jag drog därför slutsatsen att så inte var fallet. Genom validatorerna såg jag dock ett par problem som jag annars missat. Jag hade exemplvis missat att stänga några taggar samtidgt som jag hade ett par andra varningar som kunde åtgärdas. I fallet nedan var det enbart en a-tagg som saknades.
+
+    <img src="img/mindre_problem_som_visas_i_testning.PNG" alt=""> 
+
+    Vad som också uppmärksammades var att jag av misstag glömt att använda li-taggen för att markera list-obekt inne i en osorterad lista. Istället hade jag använt mig enbart av a-taggar. När jag försökte lösa detta möttes jag dock av problem med stylingen av html-dokumentet. Jag kommer därför behöva se över min css-kod. Problemet här är troligen av liknande karaktär som problemet beskrivit nedan som upstod när jag försökte byta ut taggar till mer semantiska variater.
+
+    <img src="img/element_a_som_child_fel.PNG" alt="">
+
+
+
+
+    När jag tidgare testkört sidan i edge upptäckte jag även att jag hade ett problem med z-index för en bild på sidan. Detta löste jag enkelt genom att justera just z-index. 
+
+    <img src="img/testkörning_i_edge.PNG" alt="">
+
+    När jag lade till ikoner till min huvudsakliga meny i nav-blocket insåg jag också att detta gjorde att ikonen och texten hamade på olika rader när skärmbredden blev väldigt liten. Detta löste jag genom att justera storleken på div:en för list-elementet som inehöll texten och ikonen. 
+
+    <img src="img/losning_förändring_av_div_storlek.PNG" alt="">
+
+    Under lektionen försökte jag också att se över mitt användande av sematiska taggar. Detta gav dock problem eftersom jag regelbundet kodat med hjälp av typen <br> .klass_för_parent section{} vilket därmed innebar att stylingen sakandes för elementet när jag bytte klassen från section till article. 
+
+    <img src="img/byte_till_sematiska_taggar_fel.PNG" alt="">
+
+
+
+    När jag testade kontarserna mellan de olika färgkombinationer jag använt fick jag också högt betyg på alla kombinationer mellan text och bakgrund. Det jag dock insåg var att jag troligtvis borde byta en av bilderna för vackert väder på vädersidan då kontrasten just här blivit dålig. Eftersom tillgången på bilder dock är begränsad samtidgt som jag vill undvika att byta textfärg är jag dock osäker på om jag ska byta bild. Det är dock ett förbättringsområde som man kan se över. Att ge lite box-shadow hade möjligtvis kunnat hjälpa.
+    
+
+
     <h2>5. Utvärdering</h2>
     <!-- Ex: Vad gick bra/mindre bra? (i arbetet/din förmåga).
     Nyanserat: "hur hade det blivit om jag istället hade...?"
     Konkreta förbättringsförslag i produkt + process. -->
+
+        Något som jag gärna hade lagt ned tid på att implementera hade varit att få inloggningssidan att faktiskt fungera. Detta skulel dock kräva kunskaper inom webbserverprorammering som jag nu inte har.
+
+        Jag tror vidare att jag också lagt ned för mycket tid på just java-script och mer komlicerade kodningsproblem vilket har tagit tid från att faktiskt designa själva sidan med hjälp av grid och flex mm. 
 
 </body>
 </html>
