@@ -21,24 +21,16 @@ body{
     grid-template-areas:
     "na na na na"
     "s1 s1 s1 s1"
-    "se se se se"
-    "se se se se"
-    "se se se se"
     "a1 a1 a1 a1"
     "a2 a2 a2 a2"
-    "a3 a3 a3 a3"
-    "a4 a4 a4 a4"
-    "a5 a5 a5 a5"
-    "a6 a6 a6 a6"
-    "a7 a7 a7 a7"
-    "a8 a8 a8 a8"
     "fo fo fo fo"
     ;
     height: 100vh;
     width: 100vw;
-    grid-template-rows: 10vh 80vh 45vw 20vh 1fr 280vh 280vh 280vh 280vh 280vh 280vh 280vh 280vh 170vh;
+    grid-template-rows: 10vh 60vh 84vh 60vw 170vh;
     grid-template-columns: 6fr 1fr 1fr 3fr;
     background: linear-gradient(rgb(0, 0, 0), rgba(174, 23, 166, 0.776));
+    background: whitesmoke;
     grid-gap: 0.7vh;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -236,10 +228,39 @@ body{
     }
 }
 
-@media screen and (min-width: 750px) {
+.img-sektion{
+
+    width: 100vw;
+    background-image: url(../img/pamela-saunders-yV8hguKKMq0-unsplash.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-area: s1;
+    display: flex;
+    justify-content: center;
+    z-index: -2;
+}
+
+.menyruta{
+    height: 40vh;
+    width: 70vw;
+    position: relative;
+    top: 17vw;
+    background: rgba(5, 27, 31, 0.776);
+    z-index: -1;
+    padding: 3vh;
+    margin-bottom: 20vh;
+    z-index: 2;
+}
+
+@media screen and (min-width: 600px) {
     .gridwrapper-index{
-        grid-template-rows: 10vh 80vh 45vw 20vh 1fr 280vh 280vh 280vh 280vh 280vh 280vh 280vh 280vh 65vh;
+        grid-template-rows: 10vh 80vh 60vw 60vw 65vh;
         grid-template-columns: 6fr 1fr 1fr 3fr;
+    }
+
+    .menyruta{
+        position: relative;
+        top: 30vh;
     }
 }
 
@@ -247,14 +268,91 @@ body{
 @media screen and (min-width: 1050px) {
 
     .gridwrapper-index{
-        grid-template-rows: 10vh 100vh 45vw 20vh 1fr 280vh 280vh 280vh 280vh 280vh 280vh 280vh 280vh 45vh;
+        grid-template-rows: 10vh 95vh 90vh 45vh;
         grid-template-columns: 6fr 1fr 1fr 3fr;
+    }
+
+    .img-sektion{
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 50vh;
+    }
+
+    .about_corona h2, 
+    .about_corona h4, 
+    .about_corona p{
+        margin-left: 12vw;
+        display: block;
+        width: 30vw;
     }
 
     footer{
         height: 45vh;
     }
+
+    .menyruta{
+        position: relative;
+        top: 35vh;
+        
+    }
 }
+
+
+
+
+.about_corona{
+    background: whitesmoke;
+    height: 70vh;
+    width: 100%;
+    grid-area: a1;
+    padding: 50px;
+}
+
+.about_corona h2{
+    font-size: 4vh;
+    display: inline;
+    padding-right: 20px;
+    box-shadow: 12px 10px 5px -8px steelblue;
+}
+
+.about_corona h4{
+    text-align: left;
+    font-size: 2vh;
+    margin-right: 20vw;
+    margin-top: 2vh;
+}
+
+.about_corona p{
+    color: black;
+    font-size: 2vh;
+    margin-top: 2vh;
+    margin-right: 20vw;
+
+}
+
+.restyper{
+    background: rgb(73, 73, 85);
+    height: 40vh;
+    width: 100vw;
+    grid-area: a2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -589,45 +687,6 @@ video{
 
 
 
-
-
-
-.img-sektion{
-
-    width: 100vw;
-    background-image: url(../img/pamela-saunders-yV8hguKKMq0-unsplash.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    grid-area: s1;
-    display: flex;
-    justify-content: center;
-    z-index: -2;
-}
-
-.menyruta{
-    height: 40vh;
-    width: 70vw;
-    position: relative;
-    top: 17vw;
-    background: rgba(5, 27, 31, 0.776);
-    z-index: -1;
-    padding: 3vh;
-    margin-bottom: 20vh;
-    z-index: 2;
-}
-
-@media screen and (min-width: 700px) {
-    .menyruta{
-        top: 25vw;
-    }
-}
-
-@media screen and (min-width: 1250px) {
-    .menyruta{
-        top: 30vw;
-    }
-}
-
 .menyruta h1{
     margin-bottom: 3vh;
     font-size: 2vh;
@@ -680,7 +739,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 option{
-    font-size: 8px;
+    font-size: 3vw;
     padding: 10px;
     font-family: 'Muli', sans-serif;
 }
@@ -801,6 +860,10 @@ option{
     width: 100%;
     text-align: center;
     cursor: pointer;
+}
+
+.search:hover{
+    box-shadow: inset 126px 123px 221px -6px rgba(255, 255, 255, 0.534);
 }
 
 .search p{
@@ -1482,7 +1545,7 @@ footer{
     ;
     height: 100vh;
     width: 100vw;
-    grid-template-rows: 10vh 43vw 58vw 20vh 1fr 280vh 280vh 280vh 280vh 280vh 280vh 280vh 280vh 170vh;
+    grid-template-rows: 10vh 43vw 58vw 20vh 1fr 350vh 350vh 350vh 350vh 350vh 350vh 350vh 350vh 170vh;
     grid-template-columns: 6fr 1fr 1fr 3fr;
     background: whitesmoke;
     grid-gap: 0.7vh;
@@ -1609,18 +1672,43 @@ footer{
   }
 
 @media screen and (min-width: 1000px) {
-  .item h2{
-    font-size: 2vh;
-    }
+
 
     .diamond-grid-orter{
-        width: 90vh;
-        height: 90vh;
-        left: calc((100vw - 90vh) / 2);
+        width: 35vw;
+        height: 35vw;
+        left: 10vw;
     }
 
     .orter_ruta{
-        height: 90vh;
+        height: 50vw;
+    }
+
+    .gridwrapper-orter{
+        display: grid;
+        grid-template-areas:
+        "na na na na"
+        "s1 s1 se se"
+        "a1 a1 a1 a1"
+        "a2 a2 a2 a2"
+        "a3 a3 a3 a3"
+        "a4 a4 a4 a4"
+        "a5 a5 a5 a5"
+        "a6 a6 a6 a6"
+        "a7 a7 a7 a7"
+        "a8 a8 a8 a8"
+        "fo fo fo fo"
+        ;
+        grid-template-rows: 10vh 43vw 350vh 350vh 350vh 350vh 350vh 350vh 350vh 350vh 170vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .img-orter{
+        width: 75vw;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        left: -20vw;
     }
 }
 
@@ -1761,7 +1849,7 @@ footer{
 .skidinfo{
     height: 50vh;
     width: 70vw;
-    border: 1px solid black;
+ 
     position: relative;
     left: 15vw;
 }
@@ -1828,7 +1916,7 @@ footer{
     }
     .skidinfo{
         height: 50vh;
-        width: 40vw;
+        width: 40vw;   border: 1px solid black;
         border: 1px solid black;
         position: relative;
         left: 10vw;
@@ -1879,6 +1967,11 @@ footer{
 
 .center{
     text-align: center;
+}
+
+#large_icon{
+    font-size: 40px;
+
 }
 
 .blue_slopes{
