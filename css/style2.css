@@ -23,11 +23,15 @@ body{
     "s1 s1 s1 s1"
     "a1 a1 a1 a1"
     "a2 a2 a2 a2"
+    "ma ma ma ma"
+    "a3 a3 a3 a3"
+    "a4 a4 a4 a4"
+    "a5 a5 a5 a5"
     "fo fo fo fo"
     ;
     height: 100vh;
     width: 100vw;
-    grid-template-rows: 10vh 60vh 84vh 60vw 170vh;
+    grid-template-rows: 10vh 60vh 54vh 50vh 60vh 70vh 40vh 40vh 170vh;
     grid-template-columns: 6fr 1fr 1fr 3fr;
     background: linear-gradient(rgb(0, 0, 0), rgba(174, 23, 166, 0.776));
     background: whitesmoke;
@@ -38,7 +42,7 @@ body{
    
 }
 
-  .nav{
+.nav{
     grid-area: na;
     background: rgba(9, 73, 133, 0.776);
     position: sticky;    
@@ -205,13 +209,14 @@ body{
     }
     .burger{
         opacity: 0;
+        display: none;
     }
-    .meny li a {
+    .meny a {
         text-decoration: none;
-        letter-spacing: 3px;
+        letter-spacing: 0px;
         font-size: 16px;
         font-weight: 300;
-        margin: 1.35vh;
+        margin: 1vh;
         text-transform: uppercase;
             
     }
@@ -252,9 +257,26 @@ body{
     z-index: 2;
 }
 
-@media screen and (min-width: 600px) {
+.restyper{
+    background: rgb(73, 73, 85);
+    height: 35vh;
+    width: 100vw;
+    grid-area: a2;
+    z-index: -2;
+    position: relative;
+}
+
+.mindre_bild{
+    height: 25vh;
+    position: absolute;
+    right: -15vw;
+    top: 5vh;
+    transform: rotate(90deg)
+}
+
+@media screen and (min-width: 750px) {
     .gridwrapper-index{
-        grid-template-rows: 10vh 80vh 60vw 60vw 65vh;
+        grid-template-rows: 10vh 80vh 40vw 50vw 50vh 60vh 40vh 44vh 65vh;
         grid-template-columns: 6fr 1fr 1fr 3fr;
     }
 
@@ -262,13 +284,30 @@ body{
         position: relative;
         top: 30vh;
     }
+
+    .restyper{
+        background: rgb(73, 73, 85);
+        height: 50vh;
+        width: 100vw;
+        grid-area: a2;
+        z-index: -2;
+        position: relative;
+    }
+
+    .mindre_bild{
+        height: 37vh;
+        position: absolute;
+        right: -4vw;
+        top: 6.5vh;
+        transform: rotate(90deg)
+    }
 }
 
 
 @media screen and (min-width: 1050px) {
 
     .gridwrapper-index{
-        grid-template-rows: 10vh 95vh 90vh 45vh;
+        grid-template-rows: 10vh 85vh 50vh 70vh 50vh 65vh 45vh 45vh;
         grid-template-columns: 6fr 1fr 1fr 3fr;
     }
 
@@ -295,6 +334,14 @@ body{
         top: 35vh;
         
     }
+
+    .mindre_bild{
+        height: 44vh;
+        position: absolute;
+        right: -4vw;
+        top: 8vh;
+        transform: rotate(90deg)
+    }
 }
 
 
@@ -302,17 +349,17 @@ body{
 
 .about_corona{
     background: whitesmoke;
-    height: 70vh;
+    height: 30vh;
     width: 100%;
     grid-area: a1;
     padding: 50px;
+    z-index: 1;
 }
 
 .about_corona h2{
     font-size: 4vh;
-    display: inline;
-    padding-right: 20px;
-    box-shadow: 12px 10px 5px -8px steelblue;
+    display: block;
+    margin-right: 10vw;
 }
 
 .about_corona h4{
@@ -330,24 +377,219 @@ body{
 
 }
 
-.restyper{
-    background: rgb(73, 73, 85);
-    height: 40vh;
-    width: 100vw;
-    grid-area: a2;
+
+
+.restyper::after{
+    content: "";
+    position: absolute;
+    height: 300px;
+    width: 200px;
+    top: -14vh;
+    right: 0;
+    background: whitesmoke;
+    transform: skewY(45deg);
+    -ms-transform-origin: right;
+    transform-origin: right;
+    z-index: 1;
+}
+
+.restyper h2{
+    color: whitesmoke;
+    font-size: 4vh;
+    display: inline-block;
+    margin: 20px;
+    padding-right: 10px;
+    box-shadow: 12px 10px 5px -8px rgb(245, 144, 77);
 }
 
 
 
+.restyper p{
+    color: whitesmoke;
+    font-size: 1.5vh;
+    display: block;
+    width: 40vw;
+    margin: 15px;
+    padding-left: 2vw;
+    font-family: 'Mukta', sans-serif;
+}
+
+.restyper p:hover{
+    color: rgb(245, 144, 77);
+}
 
 
 
+.main_index{
+    grid-area: ma;
+}
+
+.main_index h2{
+    color: rgb(0, 0, 0);
+    font-size: 5vh;
+    display: inline-block;
+    margin-left: 20px;
+    padding-right: 10px;
+}
+
+.main_index h3{
+    text-align: left;
+    font-size: 3vh;
+    margin-left: 20px;
+    margin-top: 2vh;
+}
+
+.main_index p{
+    color: rgb(0, 0, 0);
+    font-size: 2vh;
+    margin: 20px;
+    padding-right: 10px;
+    font-family: 'Mukta', sans-serif;
+}
+
+.bilder-div{
+    display: flex;
+    justify-content: space-around;
+    height: 50vh;
+    width: 100vw;
+
+}
+
+.bilder_i_div{
+    height: 45vh;
+    width: 30vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 
 
+.bilder_i_div h2{
+    color: whitesmoke;
+    font-size: 3vh;
+    padding: 20px;
+    padding-top: 7vh;
+}
+.bilder_i_div h3{
+    color: whitesmoke;
+    font-size: 2vh;
+    padding-top: 7vh;
+    margin: 0 20px;
+    padding-bottom: 2vh;
+}
+
+.img1{
+    background-image: url(../img/IMG_0264.jpg);
+}
+
+.img2{
+    background-image: url(../img/guillaume-groult-k0G79qQQY_E-unsplash.jpg);
+}
+
+.img3{
+    background-image: url(../img/IMG_0259.jpg);
+}
+
+.filter{
+    height: 45vh;
+    width: 30vw;
+    position: absolute;
+    background: rgba(99, 2, 99, 0.301);
+}
+
+.nyhetsbrev{
+    grid-area: a4;
+    height: 40vh;
+    width: 100%;
+    background: url(../img/IMG_0259.jpg);
+    background-size: cover;
+}
 
 
+.nyhetsbrev h2{
+    color: whitesmoke;
+    font-size: 4vh;
+    display: inline-block;
+    margin: 20px;
+    padding-right: 10px;
+    box-shadow: 3px 10px 5px -8px rgb(255, 255, 255);
+}
 
+
+.nyhetsbrev input[type="text"]{
+    width: 60%;
+    display: block;
+    margin: 20px 20px;
+    padding: 10px;
+    border: 1px solid #b5b5b5;
+    border-radius: 4px;
+    outline: none;
+}
+
+.nyhetsbrev input[type="button"]{
+    width: minmax(30vh, 20vw);
+    background: #aa8960;
+    color: #f9f9f9;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    margin-left: 20px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor:pointer;
+}
+
+.kontakta_oss{
+    grid-area: a5;
+    height: 40vh;
+    width: 100%;
+    background: rgba(158, 158, 158, 0.13);
+}
+
+
+.kontakta_oss h2{
+    color: rgb(131, 127, 127);
+    margin-top: 5vh;
+    padding-left: 4vw;
+    font-family: 'Mukta', sans-serif;
+    font-size: 4vh;
+}
+
+.kontakta_oss h4{
+    color: rgb(131, 127, 127);
+    padding-left: 4vw;
+    font-family: 'Mukta', sans-serif;
+    font-size: 2.5vh;
+    margin-bottom: 2vh;
+}
+
+.kontakta_oss p{
+    color: rgb(131, 127, 127);
+    padding-left: 4vw;
+    font-family: 'Mukta', sans-serif;
+}
+
+.kontakta_oss a{
+    color: rgb(182, 94, 21);
+}
+
+
+@media screen and (min-width: 400px) {
+    .about_corona h2{
+        box-shadow: 12px 10px 5px -8px steelblue;
+    }
+
+    .mindre_bild{
+        height: 30vh;
+        position: absolute;
+        right: -4vw;
+        top: 5vh;
+    }
+
+    .restyper p{
+        font-size: 2.5vh;
+    }
+}
 
 
 
@@ -1578,7 +1820,7 @@ footer{
     height: 70vw;
     transform: rotate(45deg);
     position: absolute;
-    top: 9vh;
+    top: 15vh;
     left: calc((100vw - 70vw) / 2);
     
     display: grid;
@@ -1602,7 +1844,9 @@ footer{
 }
 
 .item:hover{
-    background: rgba(27, 153, 192, 0.404);
+    background: rgba(27, 154, 192, 0);    
+    box-shadow: 10px 10px 30px 5px steelblue;
+    
 }
 
 
