@@ -31,7 +31,7 @@ body{
     ;
     height: 100vh;
     width: 100vw;
-    grid-template-rows: 10vh 60vh 54vh 50vh 60vh 70vh 40vh 40vh 170vh;
+    grid-template-rows: 10vh 60vh 54vh 50vh 60vh 220vh 40vh 40vh 170vh;
     background: linear-gradient(rgb(0, 0, 0), rgba(174, 23, 166, 0.776));
     background: whitesmoke;
     grid-gap: 0.7vh;
@@ -274,76 +274,6 @@ body{
     transform: rotate(90deg)
 }
 
-@media screen and (min-width: 750px) {
-    .gridwrapper-index{
-        grid-template-rows: 10vh 80vh 40vw 50vw 50vh 60vh 40vh 44vh 65vh;
-        grid-template-columns: 6fr 1fr 1fr 3fr;
-    }
-
-    .menyruta{
-        position: relative;
-        top: 30vh;
-    }
-
-    .restyper{
-        background: rgb(73, 73, 85);
-        height: 50vh;
-        width: 100vw;
-        grid-area: a2;
-        z-index: -2;
-        position: relative;
-    }
-
-    .mindre_bild{
-        height: 37vh;
-        position: absolute;
-        right: -4vw;
-        top: 6.5vh;
-        transform: rotate(90deg)
-    }
-}
-
-
-@media screen and (min-width: 1050px) {
-
-    .gridwrapper-index{
-        grid-template-rows: 10vh 85vh 50vh 70vh 50vh 65vh 45vh 45vh;
-        grid-template-columns: 6fr 1fr 1fr 3fr;
-    }
-
-    .img-sektion{
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 50vh;
-    }
-
-    .about_corona h2, 
-    .about_corona h4, 
-    .about_corona p{
-        margin-left: 12vw;
-        display: block;
-        width: 30vw;
-    }
-
-    footer{
-        height: 45vh;
-    }
-
-    .menyruta{
-        position: relative;
-        top: 35vh;
-        
-    }
-
-    .mindre_bild{
-        height: 44vh;
-        position: absolute;
-        right: -4vw;
-        top: 8vh;
-        transform: rotate(90deg)
-    }
-}
-
 
 
 
@@ -448,18 +378,22 @@ body{
 }
 
 .bilder-div{
-    display: flex;
-    justify-content: space-around;
-    height: 50vh;
-    width: 100vw;
-    overflow: scroll;
-    z-index: 4;
-    white-space: nowrap;
+    margin-top: 15vh;
+    display: grid;
+    grid-template-areas: 
+    "01"
+    "02"
+    "03"
+    "04";
+    grid-template-rows: 50vh 50vh 50vh 40vh;
+    width: 100vw;   
 }
+
 
 .bilder_i_div{
     height: 45vh;
-    width: 30vw;
+    width: 95vw;
+    margin: 0 1vh;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -473,12 +407,13 @@ body{
     padding: 20px;
     padding-top: 7vh;
 }
-.bilder_i_div h3{
+.bilder_i_div p{
     color: whitesmoke;
     font-size: 2vh;
     padding-top: 7vh;
     margin: 0 20px;
     padding-bottom: 2vh;
+    font-family: 'Mukta', sans-serif;
 }
 
 .img1{
@@ -493,11 +428,144 @@ body{
     background-image: url(../img/IMG_0259.jpg);
 }
 
+.img4{
+    background-image: url(../img/pietro-de-grandi-ZLcZlM0gi_c-unsplash.jpg);
+}
+
 .filter{
     height: 45vh;
-    width: 30vw;
+    width: 95vw;
     position: absolute;
     background: rgba(99, 2, 99, 0.301);
+    opacity: 0;
+}
+
+.filter:hover{
+    opacity: 1;
+}
+
+@media screen and (min-width: 400px) {
+    .bilder-div{
+        margin-top: 5vh;
+        grid-template-areas: 
+        "01 01"
+        "03 04";
+        grid-template-rows: 50vh 40vh;
+        grid-template-columns: 1fr 1fr;
+        width: 100vw; 
+    }
+
+    .bilder_i_div{
+        width: 48vw;
+        margin: 0 1vh;
+    }
+
+    .filter{
+        width: 48vw;
+    }
+
+    .gridwrapper-index{
+        grid-template-rows: 10vh 60vh 54vh 50vh 60vh 105vh 40vh 40vh 170vh;
+    }
+    
+}
+
+@media screen and (min-width: 750px) {
+    .gridwrapper-index{
+        grid-template-rows: 10vh 80vh 40vw 50vw 50vh 105vh 40vh 44vh 65vh;
+        grid-template-columns: 6fr 1fr 1fr 3fr;
+    }
+
+    .menyruta{
+        position: relative;
+        top: 30vh;
+    }
+
+    .restyper{
+        background: rgb(73, 73, 85);
+        height: 50vh;
+        width: 100vw;
+        grid-area: a2;
+        z-index: -2;
+        position: relative;
+    }
+
+    .mindre_bild{
+        height: 37vh;
+        position: absolute;
+        right: -4vw;
+        top: 6.5vh;
+        transform: rotate(90deg)
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .bilder-div{
+        display: flex;
+        justify-content: space-around;
+        height: 50vh;
+        width: 100vw; 
+    }
+
+    .bilder_i_div{
+        width: 23vw;
+        margin: 0 1vh;
+    }
+
+    .filter{
+        width: 23vw;
+    }
+
+    .gridwrapper-index{
+        grid-template-rows: 10vh 85vh 50vh 70vh 50vh 65vh 45vh 65vh;
+    }
+    
+    footer{
+        height: 45vh;
+    }
+}
+
+
+
+
+@media screen and (min-width: 1050px) {
+
+    .gridwrapper-index{
+        grid-template-rows: 10vh 85vh 50vh 70vh 50vh 65vh 45vh 65vh;
+        grid-template-columns: 6fr 1fr 1fr 3fr;
+    }
+
+    .img-sektion{
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 50vh;
+    }
+
+    .about_corona h2, 
+    .about_corona h4, 
+    .about_corona p{
+        margin-left: 12vw;
+        display: block;
+        width: 30vw;
+    }
+
+    footer{
+        height: 45vh;
+    }
+
+    .menyruta{
+        position: relative;
+        top: 35vh;
+        
+    }
+
+    .mindre_bild{
+        height: 44vh;
+        position: absolute;
+        right: -4vw;
+        top: 8vh;
+        transform: rotate(90deg)
+    }
 }
 
 .nyhetsbrev{
@@ -2331,7 +2399,7 @@ footer{
     ;
     height: 100vh;
     width: 100vw;
-    grid-template-rows: 10vh 60vh 104vh 240vh 170vh;
+    grid-template-rows: 10vh 60vh 104vh 250vh 170vh;
     background: linear-gradient(rgb(0, 0, 0), rgba(174, 23, 166, 0.776));
     background: whitesmoke;
     grid-gap: 0.7vh;
