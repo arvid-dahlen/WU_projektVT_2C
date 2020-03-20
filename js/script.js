@@ -12,8 +12,8 @@ const Slide = ()=>{
         nav.classList.toggle('nav-active');   
         burger.classList.toggle('toggle');
         shareButtons.classList.toggle('wrapper-active')
-        if (diamondGrid != null)
-        diamondGrid.classList.toggle('diamond-grid-active');
+        if (diamondGrid != null){
+        diamondGrid.classList.toggle('diamond-grid-active');}
         
         navLinks.forEach((link, index) => {
         if(link.style.animation){
@@ -112,29 +112,31 @@ function test_str() {
 
 
 
-  
+    
 const header = document.querySelector(".nav");
 const sectionOne = document.querySelector(".img-sektion");
 
-const sectionOneOptions = {
-  rootMargin: "-200px 0px 0px 0px"
-};
+if (sectionOne != null){
+    const sectionOneOptions = {
+    rootMargin: "-200px 0px 0px 0px"
+    };
 
-const sectionOneObserver = new IntersectionObserver(function(
-  entries,
-  sectionOneObserver
-) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      header.classList.add("nav-scrolled");
-    } else {
-      header.classList.remove("nav-scrolled");
-    }
-  });
-},
-sectionOneOptions);
+    const sectionOneObserver = new IntersectionObserver(function(
+    entries,
+    sectionOneObserver
+    ) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+        header.classList.add("nav-scrolled");
+        } else {
+        header.classList.remove("nav-scrolled");
+        }
+    });
+    },
+    sectionOneOptions);
 
-sectionOneObserver.observe(sectionOne);
+    sectionOneObserver.observe(sectionOne);
+}
 
 
 const wrapper = document.querySelector(".wrapper");
@@ -218,6 +220,10 @@ const showFront = ()=>{
     });
 }
 showFront(); 
+
+
+
+
 
 
 

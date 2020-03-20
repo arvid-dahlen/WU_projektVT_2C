@@ -32,7 +32,6 @@ body{
     height: 100vh;
     width: 100vw;
     grid-template-rows: 10vh 60vh 54vh 50vh 60vh 70vh 40vh 40vh 170vh;
-    grid-template-columns: 6fr 1fr 1fr 3fr;
     background: linear-gradient(rgb(0, 0, 0), rgba(174, 23, 166, 0.776));
     background: whitesmoke;
     grid-gap: 0.7vh;
@@ -242,6 +241,7 @@ body{
     grid-area: s1;
     display: flex;
     justify-content: center;
+    background-position: top;
     z-index: -2;
 }
 
@@ -267,7 +267,7 @@ body{
 }
 
 .mindre_bild{
-    height: 25vh;
+    height: 25.5vh;
     position: absolute;
     right: -15vw;
     top: 5vh;
@@ -452,7 +452,9 @@ body{
     justify-content: space-around;
     height: 50vh;
     width: 100vw;
-
+    overflow: scroll;
+    z-index: 4;
+    white-space: nowrap;
 }
 
 .bilder_i_div{
@@ -460,6 +462,7 @@ body{
     width: 30vw;
     background-size: cover;
     background-repeat: no-repeat;
+
 }
 
 
@@ -500,15 +503,15 @@ body{
 .nyhetsbrev{
     grid-area: a4;
     height: 40vh;
-    width: 100%;
-    background: url(../img/IMG_0259.jpg);
+    background-image: url(../img/IMG_0259.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 
 .nyhetsbrev h2{
     color: whitesmoke;
-    font-size: 4vh;
+    font-size: min(4.8vw, 4vh);
     display: inline-block;
     margin: 20px;
     padding-right: 10px;
@@ -580,7 +583,7 @@ body{
     }
 
     .mindre_bild{
-        height: 30vh;
+        height: 26vh;
         position: absolute;
         right: -4vw;
         top: 5vh;
@@ -603,17 +606,17 @@ body{
     grid-template-areas:
     "na na na na"
     "se se se se"
-    "b1 b1 b1 b1"
+    "fo fo fo fo"
     
     ;
     height: 100vh;
     width: 100vw;
-    grid-template-rows: 10vh 60vh;
+    grid-template-rows: 10vh 100vh 70vh;
     grid-template-columns: 100vw 1fr 1fr 3fr;
    
     grid-gap: 0.7vh;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: scroll;
     position: fixed;
     background: linear-gradient(rgb(0, 0, 0), rgba(174, 23, 166, 0.776));
     z-index: 1;
@@ -1305,18 +1308,21 @@ p{
     display: grid;
     grid-template-areas:
     "na na na na"
+    "he he he he"
     "s1 s1 s1 s1"
     "s2 s2 s2 s2"
     "s3 s3 s3 s3"
     "s4 s4 s4 s4"
     "s5 s5 s5 s5"
     "s6 s6 s6 s6"
+    "s7 s7 s7 s7"
+    "s8 s8 s8 s8"
     "fo fo fo fo"
     
     ;
     height: 100vh;
     width: 100vw;
-    grid-template-rows: 10vh 70vh 70vh 70vh 70vh 70vh 90vh 200vh;
+    grid-template-rows: 10vh 40vh 70vh 70vh 70vh 70vh 70vh 70vh 70vh 90vh 200vh;
     grid-template-columns: 100vw 1fr 1fr 1fr;
    
     grid-gap: 0.7vh;
@@ -1328,7 +1334,28 @@ p{
 
 }
 
+.weather_image{
+    grid-area: he;
+    height: 40vh;
+    background-image: url(../img/cloud_sky_mountain_snow-7497.jpg);
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+}
 
+.weather_image h1{
+    display: inline;
+    position: absolute;
+    bottom: -14vh;
+    padding: 2vh;
+    padding-left: 3vh;
+    padding-right: 100%;
+    font-size: 12vh;
+    color: rgb(44, 169, 185);
+    font-family: 'Titillium Web', sans-serif;
+    box-shadow: rgb(11, 56, 70) 50vh 4px 60vh 7px inset;
+    background: rgb(255, 255, 255);
+}
 
 
 .card{
@@ -1363,8 +1390,17 @@ p{
 
 .card6{
     grid-area: s6;
+}
+
+.card7{
+    grid-area: s7;
+}
+
+.card8{
+    grid-area: s8;
     margin-bottom: 500px;
 }
+
 
 @media screen and (min-width: 480px) {
 
@@ -1372,16 +1408,18 @@ p{
         display: grid;
         grid-template-areas:
         "na na na na"
+        "he he he he"
         "s1 s1 s2 s2"
         "s3 s3 s4 s4"
         "s5 s5 s6 s6"
+        "s7 s7 s8 s8"
         "fo fo fo fo"
         
         
         ;
         height: 100vh;
         width: 100vw;
-        grid-template-rows: 10vh 70vh 70vh 90vh 160vh ;
+        grid-template-rows: 10vh 40vh 70vh 70vh 70vh 90vh 160vh ;
         grid-template-columns: 1fr 1fr 1fr 1fr;
        
         grid-gap: 0.7vh;
@@ -1407,11 +1445,13 @@ p{
         display: grid;
         grid-template-areas:
         "na na na na na na"
+        "he he he he he he"
         "s1 s1 s2 s2 s3 s3"
         "s4 s4 s5 s5 s6 s6"
+        "s7 s7 s7 s8 s8 s8"
         "fo fo fo fo fo fo"
         ;
-        grid-template-rows: 10vh 70vh 90vh 65vh;
+        grid-template-rows: 10vh 40vh 70vh 70vh 90vh 65vh;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 
@@ -1452,6 +1492,26 @@ p{
 
 .card4 .front{
     background-image: url(../img/stanley-dai-QLfjlyEamV4-unsplash.jpg);
+    background-size: cover;
+}
+
+.card5 .front{
+    background-image: url(../img/joshua-reddekopp-7Oq9r2CiTLg-unsplash.jpg);
+    background-size: cover;
+}
+
+.card6 .front{
+    background-image: url(../img/marco-bonomo-491PQ04olSg-unsplash.jpg);
+    background-size: cover;
+}
+
+.card7 .front{
+    background-image: url(../img/stanley-dai-QLfjlyEamV4-unsplash.jpg);
+    background-size: cover;
+}
+
+.card8 .front{
+    background-image: url(../img/joshua-reddekopp-7Oq9r2CiTLg-unsplash.jpg);
     background-size: cover;
 }
 
@@ -1502,7 +1562,7 @@ p{
 
 
 .forecast{
-    margin: 0;
+    margin-top: 5vh;
     padding: 0;
 }
 
@@ -1583,6 +1643,35 @@ fas{
 a{
     text-decoration: none;
 }
+
+.link_to_more{
+    height: 7vh;
+    width: 100%;
+    background: #e91e6200;
+    border: #63cdf7 3px solid;
+    margin-top: 10vh;
+    border-radius: 10px;
+}
+
+.link_to_more:hover{
+    transition: ease-in-out 0.2s;
+    background:  #63cdf7;
+}
+
+.link_to_more p{
+    font-size: 2vh;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 2.5vh;
+
+}
+
+
+
+
+
+
+
 
 
 
@@ -2123,7 +2212,8 @@ footer{
     font-family: 'Titillium Web', sans-serif;
     font-size: 2.5vh;
     text-align: center;
-    padding-bottom: 9vh;;
+    margin-top: 10vh;
+    padding-bottom: 1vh;;
 }
 
 .skidinfo p{
@@ -2164,6 +2254,7 @@ footer{
         border: 1px solid black;
         position: relative;
         left: 10vw;
+        position: relative;
     }
 
     .skidinfo p{
@@ -2214,10 +2305,111 @@ footer{
 }
 
 #large_icon{
-    font-size: 40px;
+    font-size: 5vw;
+    display: block;
+    position: absolute;
+    right: calc((100% - 5vw) / 2);
+    margin-top: 4vh;
+    color: #1598cc;
 
 }
 
 .blue_slopes{
     margin-top: 20px;
+}
+
+
+
+.gridwrapper-erbjudanden{
+    display: grid;
+    grid-template-areas:
+    "na na na na"
+    "he he he he"
+    "ma ma ma ma"
+    "a1 a1 a1 a1"
+    "fo fo fo fo"
+    ;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: 10vh 60vh 104vh 240vh 170vh;
+    background: linear-gradient(rgb(0, 0, 0), rgba(174, 23, 166, 0.776));
+    background: whitesmoke;
+    grid-gap: 0.7vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: fixed;
+}
+
+.resetips{
+    grid-area: ma;
+}
+
+.resetips h2{
+    text-align: center;
+    font-size: 4vh;
+    font-family: 'Mukta', sans-serif;
+}
+
+.resetips h3{
+    margin-left: 5vw;
+    margin-top: 2vh;
+    font-size: 3.5vh;
+}
+
+.resetips p{
+    color: #444444;
+    margin: 3vw 10vh 0 5vw;
+    font-family: 'Mukta', sans-serif;
+}
+
+.hotels{
+    grid-area: a1;
+    grid-template-areas: 
+    "01"
+    "02"
+    "03"
+    "04"
+    "05"
+    "06"
+    "07";
+    grid-gap: 4vh;
+}
+
+
+.hotels section{
+    height: 30vh;
+    background: greenyellow;
+    margin-bottom: 5vh;
+
+}
+
+.hotels p{
+    color: #444444;
+    margin: 3vw 10vh 0 5vw;
+    font-family: 'Mukta', sans-serif;
+    font-size: 2vh;
+}
+
+.read_more{
+    height: 4vh;
+    width: 30vh;;
+    background: #e91e6200;
+    border: #63cdf7 3px solid;
+    border-radius: 10px;
+    margin-left: 3vh;
+    margin-top: 4vh;
+}
+ 
+.read_more p{
+    color: #444444;
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.9vh;
+    text-align: center;
+    margin: 0;
+    margin-top: 0.75vh;
+}
+
+.read_more:hover{
+    background: #63cdf7;
+
 }
