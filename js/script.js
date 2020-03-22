@@ -225,7 +225,132 @@ showFront();
 
 
 
+const showBack2 = ()=>{
+    document.querySelector('.more2').addEventListener('click',() =>{
+        document.querySelector('.back2').classList.toggle('back-active');
+        document.querySelector('.front2').classList.toggle('front-notActive');
+    });
+}
+showBack2(); 
 
+const showFront2 = ()=>{
+    document.querySelector('.go-back2').addEventListener('click',() =>{
+        document.querySelector('.back2').classList.toggle('back-active');
+        document.querySelector('.front2').classList.toggle('front-notActive');
+    });
+}
+showFront2(); 
+
+
+
+
+const showBack3 = ()=>{
+    document.querySelector('.more3').addEventListener('click',() =>{
+        document.querySelector('.back3').classList.toggle('back-active');
+        document.querySelector('.front3').classList.toggle('front-notActive');
+    });
+}
+showBack3(); 
+
+const showFront3 = ()=>{
+    document.querySelector('.go-back3').addEventListener('click',() =>{
+        document.querySelector('.back3').classList.toggle('back-active');
+        document.querySelector('.front3').classList.toggle('front-notActive');
+    });
+}
+showFront3(); 
+
+
+
+const showBack4 = ()=>{
+    document.querySelector('.more4').addEventListener('click',() =>{
+        document.querySelector('.back4').classList.toggle('back-active');
+        document.querySelector('.front4').classList.toggle('front-notActive');
+    });
+}
+showBack4(); 
+
+const showFront4 = ()=>{
+    document.querySelector('.go-back4').addEventListener('click',() =>{
+        document.querySelector('.back4').classList.toggle('back-active');
+        document.querySelector('.front4').classList.toggle('front-notActive');
+    });
+}
+showFront4(); 
+
+
+
+
+const showBack5 = ()=>{
+    document.querySelector('.more5').addEventListener('click',() =>{
+        document.querySelector('.back5').classList.toggle('back-active');
+        document.querySelector('.front5').classList.toggle('front-notActive');
+    });
+}
+showBack5(); 
+
+const showFront5 = ()=>{
+    document.querySelector('.go-back5').addEventListener('click',() =>{
+        document.querySelector('.back5').classList.toggle('back-active');
+        document.querySelector('.front5').classList.toggle('front-notActive');
+    });
+}
+showFront5(); 
+
+
+
+const showBack6 = ()=>{
+    document.querySelector('.more6').addEventListener('click',() =>{
+        document.querySelector('.back6').classList.toggle('back-active');
+        document.querySelector('.front6').classList.toggle('front-notActive');
+    });
+}
+showBack6(); 
+
+const showFront6 = ()=>{
+    document.querySelector('.go-back6').addEventListener('click',() =>{
+        document.querySelector('.back6').classList.toggle('back-active');
+        document.querySelector('.front6').classList.toggle('front-notActive');
+    });
+}
+showFront6(); 
+
+
+
+
+const showBack7 = ()=>{
+    document.querySelector('.more7').addEventListener('click',() =>{
+        document.querySelector('.back7').classList.toggle('back-active');
+        document.querySelector('.front7').classList.toggle('front-notActive');
+    });
+}
+showBack7(); 
+
+const showFront7 = ()=>{
+    document.querySelector('.go-back7').addEventListener('click',() =>{
+        document.querySelector('.back7').classList.toggle('back-active');
+        document.querySelector('.front7').classList.toggle('front-notActive');
+    });
+}
+showFront7(); 
+
+
+
+const showBack8 = ()=>{
+    document.querySelector('.more8').addEventListener('click',() =>{
+        document.querySelector('.back8').classList.toggle('back-active');
+        document.querySelector('.front8').classList.toggle('front-notActive');
+    });
+}
+showBack8(); 
+
+const showFront8 = ()=>{
+    document.querySelector('.go-back8').addEventListener('click',() =>{
+        document.querySelector('.back8').classList.toggle('back-active');
+        document.querySelector('.front8').classList.toggle('front-notActive');
+    });
+}
+showFront8(); 
 
 
 

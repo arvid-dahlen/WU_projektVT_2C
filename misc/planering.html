@@ -19,6 +19,23 @@
 </head>
 <body>
 
+    <style>
+        img{
+            max-width: 100vw;
+            height: auto;
+             margin: 15vh;
+        }    
+
+        .mindre{
+            width: 50vh;
+            height: auto;
+            transform: rotate(90deg);
+            margin: 10vh;  
+        }
+
+      
+    </style>
+
     <h1>Dokumentation projekt Vt</h1>
 
     <h2>1. Idébeskrivning</h2>
@@ -31,7 +48,7 @@
 
     Det finns inte någon särsklit specefik målgrupp för just denna sidan. Den riktar sig nämligen till personer i alla åldrar, även om det egentligen främst är personer i åldern mellan 18 och 60 som skulle vara intresserade av att boka en skidresa. En stor utmaning som jag tvingats fundera kring är om min sida enbart ska rikta sig till svenskar (personer som förstår det svenska språket) eller även ha ett tillval att kunna se informationen på engelska. Detta skulle man isåfall kunna göra genom att ha dubbelt så många html-dokument varav varje standard-dokement har en motsvarighet vars inehåll och styling, bortsett från språket, är den samma som i standard-sokumentet. Isåfall hade jag kunnat lägga till en ruta i form av en "div" där man tvingas välja mellan att få informationen på svenska eller engelska. En ruta som maan, när man gjort sitt tillval, försvinner och gör att man kan använda sidan.
     
-    anpassad till 
+    Observera att denna idébeskrivningen skrevs på en av de tidgare lektionerna och att produkten utvecklats till att bli lite annorlunda från den ursprungliga planen.
 
 
 
@@ -39,6 +56,10 @@
 
     <h3>2.1 Handskiss</h3>
     <!-- Här lägger du en bild på din handskiss av layouten. Viktigt att du beskriver vilka boxelement som ska användas. Visa även hur du tänker med ditt grid (Hur många kolumner?) -->
+
+    <img src="img/skiss_1.png" alt="">
+    <img src="img/Skiss_2.png" alt="">
+    <img src="img/skiss_3.png" alt="">
 
     <h3>2.2 Schema</h3>
     <!-- Vad ska du göra när? Inte för detaljerat. -->
@@ -79,36 +100,40 @@
         <tr>          
             <td>6</td>
             <td>
-            <!-- Vad görs på lektionen vecka 6? -->
+            Färdigställande av menysystem och diamond-grid samt lösning av alla de mindre problem som upkommit under vägen.
+
             </td>
             <td>
-            <!-- Vad görs utanför lektionen vecka 6? -->
+            Sluföra detta om detta tar längre tid än planerat.
+
             </td>
         </tr>
 
         <tr>           
             <td>8</td>
             <td>
-            <!-- Vad görs på lektionen vecka 8? -->
+            <!-- Vad görs på lektionen vecka 8? -->Göra färdigt väder-sidan helt samtidigt som dokumentationen måste göras färdigt tillsammans med planeringen som behöver läggas in i vs-code och eventuellt justeras från tidgare planering som var väldigt grov och inte innebar mer än ett fokus på att göra färdigt något annat än en sida av de fem planerade sidorna per lektionstilfälle. Eftersom jag nu bestämmt innehåller för respektive sida och planerat för mer detaljerade layouter och utseenden på webbplatsen kan jag nu planera mer djupgående. Vidare har jag också lite nya problem som jag måste åtgärda efter att jag av misstag måste ha justerat koden i css som påverkat fler objekt och dess funktioner än vad mina aktioner var menade att göra.
             </td>
             <td>
             <!-- Vad görs utanför lektionen vecka 8? -->
+            Då jag troligen inte hinner med att utföra detta på lektionstiden planerar jag att göra detta även hemma.
 
-                Göra färdigt väder-sidan helt samtidigt som dokumentationen måste göras färdigt tillsammans med planeringen som behöver läggas in i vs-code och eventuellt justeras från tidgare planering som var väldigt grov och inte innebar mer än ett fokus på att göra färdigt något annat än en sida av de fem planerade sidorna per lektionstilfälle. Eftersom jag nu bestämmt innehåller för respektive sida och planerat för mer detaljerade layouter och utseenden på webbplatsen kan jag nu planera mer djupgående. Vidare har jag också lite nya problem som jag måste åtgärda efter att jag av misstag måste ha justerat koden i css som påverkat fler objekt och dess funktioner än vad mina aktioner var menade att göra.
+                
             </td>
         </tr>
 
         <tr>          
             <td>9</td>
             <td>
-            
+            Färdigställande av index.html med inehåll bilder samt möjlighet att välja mellan olika resmål och boenden. Även färdigställande av andra mindre problem och de resterande html-sidor som jag skapat ska utföras. Att fixa delnings-funktionen och att göra inloggning möjligt är exempel på detta.
 
                 
             </td>
             <td>
             <!-- Vad görs utanför lektionen vecka 9? -->
+            Då jag troligen inte hinner med att utföra detta på lektionstiden planerar jag att göra detta även hemma likt lektion 8.
 
-            Färdigställande av index.html med inehåll bilder samt möjlighet att välja mellan olika resmål och boenden. Även färdigställande av andra mindre problem och de resterande html-sidor som jag skapat ska utföras. Att fixa delnings-funktionen och att göra inloggning möjligt är exempel på detta.
+            
             </td>
         </tr>
 
@@ -173,7 +198,7 @@
 
     Jag har tidgare funderat på att skapa en struktur bestående av oktagonala former som jag kan fylla med information. På så sätt hade detta gett en estetisk layout med former som främst tänkte användas för att inehålla bilder och eventuellt signalera på vilken del av sidan som man befinner sig. Det som hade gjort denna strukturen så bra är att man hade kunnat kombinera bilder som tar upp olika många rutor samtigt som man ändå behåller en detaljerad och konsekvent stuktur. Vidare funderade jag även på att dessa ska symbolisera sidans innehåll och att man genom att klicka på någon av figurerna direkt ska tas till denna delen av sidan. Antingen om all information inte direkt ska vara synlig eller om man helt enkelt snabbt ska kunna ta sig längre ned på den sidan man befinner sig. (Detta var främst tänkt för huvudsidan: index.html, men kan även komma att implementeras på de andra med andra bilder som leder till olika platser inom samma html-dokument). För att få bättre förståelse för konceptet se väldigt grundläggnde skiss nedan:
 
-    <img src="img/Enkel_skiss_av_problematisk_layout.jpg" alt="Problematisk layout som troligen inte går att implementera genom att använda grid i css.">
+    <img class="mindre" src="img/Enkel_skiss_av_problematisk_layout.jpg" alt="Problematisk layout som troligen inte går att implementera genom att använda grid i css.">
 
 
     Eftersom detta verkar vara väldigt jobbigt att implementera med hjälp av css-grid kommer jag troligen satsa på en något mindre komplicerad layout med ett grid roterat 45-grader. Detta kommer ge en liknande effekt samtidigt som det är enkelt att implempentera då det enkelt kan göras med ett vanligt grid-system.
@@ -218,9 +243,9 @@
 
     Under lektionen har jag vidare också fortsatt med skapandet av det andra snedvridna grid-system som jag möjligtvis ska använda för att navigera mig i höjdled mellan olika delar av index.html genom ett enkelt knapptryck. Detta skpandet har dock visat sig vara mer komplicerat än jag först trott. För att ordna upp det för mig själv inledde jag med att skissa med papper och penna hur gridet skulle se ut och vilka områden i gridet som skulle vara färgade (dessa var det som jag ville ha innehåll i). Jag har med andra ord övergivit den något "omöjliga" idé att göra ett grid-system med oktagonala områden. Se bild nedan för att förstå tydligare hur jag använder mig av grid för att åstadkomma det utseendet jag ville ha på sidan. 
 
-    <img src="img/bild_av_planerat_diamant_grid_1.jpg" alt="bild_av_planerat_diamant_grid_1">
+    <img class="mindre" src="img/bild_av_planerat_diamant_grid_1.jpg" alt="bild_av_planerat_diamant_grid_1">
 
-    <img src="img/bild_av_planerat_diamant_grid_2.jpg" alt="bild_av_planerat_diamant_grid_snedvridet">
+    <img class="mindre" src="img/bild_av_planerat_diamant_grid_2.jpg" alt="bild_av_planerat_diamant_grid_snedvridet">
 
     Jag implementerade detta men hade lite problem med att namnge alla områden rätt eftersom det var väldigt många grid-areor samtidgt som arbetet lätt blir fel när man kopierar samma kod flera gånger och ändrar små delar för specefika grid-barn. Nedan är en bild av hur grid-systemet såg ut i början av denna process.
 
@@ -396,8 +421,7 @@ Nedan visas en bild från hur jag systematiskt genom att skapa ett helt nytt css
 
     Ett exempel på detta var input-taggen (input type="date" id="date") som ges styling automatiskt på telefoner med IOS. Jag testade nämligen detta med olika webbläsare på min telefon och kom fram till att felet kavarstod i vilket fall. Jag utförde då lite varierade sökningar på problemet och kom fram till att lösningen skulle vara att ta bort border-radius och sätta -webkit-appearence till none. På så sätt undvek jag den stylingen som annars skulle ges där storlek förändras och exempelvis input-fält ges rundade kanter och dropshadows. Detta problemet märkte jag också gällande input-typen button, password och text. I detta fallet tyckte jag dock att stylingen passade bra och därmed inte var ett problem. Om så var fallet hade jag även kunnat ge stylingen ovan till dessa objekten. Nu i efterhand funderar jag snarare på att ge en liknande styling till objekten när de visas på datorn, men jag har kommit fram till att de mer fyrkantiga input-fälten passar bättre tillsammans med de mer fyrkantiga panelerna på dator-versionen medan de rundade passar bättre med de rundade panelerna på mobilsidan.
 
-    <img src="" alt="">
-    <img src="" alt="">
+    <img src="img/problem_iphone.png" alt="">
 
     Under lektionen då jag arbetade med footern lade jag inte bara fokus på att göra layouten för denna samt lägga till ikoner och styling för när man hovrar över länkarna. Istället försökte jag också utveckla mitt java-script genom att hitta en motsats till position: stickey;. När man sätter ett objekts position till stikey gör detta att objektet positioneras relativt till en speciell vertikal punkt där det istället positioneras fixed till viewport. Jag ville till min footer åsatdkomma det motsatta med mina social-media-share-buttons som jag ville skulle vara fixed till viewport tills man kom ned till footern då de skulle positionera sig längst upp på footern (alltså relativt till denna). 
 
@@ -419,14 +443,50 @@ Nedan visas en bild från hur jag systematiskt genom att skapa ett helt nytt css
 
     <img src="img/javacript_som_fyller_funktion_bil_2.PNG" alt="">
 
+    Utöver detta har jag nu börjat sluföra skapandet av webbsidan. Jag har därmed kunnat lägga mycket tid på just detta istället för att proritera andra kurser. En av de stora förändringar jag gjorde var nu att dela upp det innehåll jag planerat att ha på startsidan till ytteliggare en sida. Jag hade tidgare funderat kring detta men jag kom fram till att det skulle var fördelaktigt att lägga info om skidorterna på en separat sida och därmed kunna beskriva dessa mer utförligt och lägga in en annan layout som kunde passa sig bättre för detta. <br>
+
+    Jag kunde då genom att studera andra webbsidor med liknande syfte hitta inspiration för en alternativ layout till min startsida med lite mer övergripande innehåll. Jag bytte även bakgrund till en mer neutral färg för att på så vis lyfta fram kontrasten mellan bakgrund och text bättre.
+    För att lyfta fram rubrikerna valde jag också att lägga box-shadow på dem genom att samtidgt ge dem display: block; vilket då gav dem denna utmärkade stil. Jag har samtidigt lagt stort fokus på att textens utseende ska vara anpassad till skärmvidd och jag har därför vallt att gå från ett till två stycken då pixelbredden ökar eftersom det annars hade blivit väldigt ojämna stycken. Alltså att texten täcker hela skärmen i bredd men edast ett fåtal rader i höjd. Utöver detta valde jag att skapa en artcile med kontrast till bakgrunden med istället för svart, vit text. Genom att styla för hover och lägga till ikoner gav jag dessa länkar i min article till tydliga vägar till andra delar av hemsidan. För att ge lite setetik till det hela valde jag också att lägga in en ::after som täcker över det högra hörnet ohc ger den dess nuvarnde utseende. Till en början hade jag problem med att positionera denna. Detta berodde på att jag missat att ge dess förälder position: relative; och därmed kunde inte mitt andra objekt placeras relativt till föräldern. <br>
+
+    <img src="img/länkar_till_olika_resor.PNG" alt="">
+
+    Jag la också stor ansträngning vid att skapa en fin layout och positionering av bilderna i denna föräldern. Eftersom de behövde variera i storlek med förändringen av skärmbredd behövde de också positioneras olika och med olika margin till varran. För att göra det hala med dynamsikt valde jag att använda många mått med viewwidth men samtidgt göra justeringar med media-queries. Bilderna som jag använder kommer vidare antingen från unspalsh där jag laddat ned dem i passande storlek beoernde på dess syfte på sidan eller bilder som jag tagit själv och komprimerat efter behov. Eftersom att photoshop inte fungerat under slutet av projektet har jag dock inte kunnat redigera alal bilder så som jag velat. Under projektet har jag tidgare använt bildredigeringsprogrammet för att skapa min logga och att utifrån en bild som sakande transparant bakgrund få det att ha just detta. Jag lade samtidigt på en ruta som jag justerade så den fick ett böjt utseende vilket jag vidare också gjorde med texten. Då jag inte kände till att man skulle lämna in phososhop-filen har jag dock ingte sparat filen och inte heller någon möjlighet att göra om den eller redigera den så den få en tydligare kontrast mot bakgrunden i fönstret där sidans ikon visas. Att lägga in bilden här var nämligen något som jag också tagit mig tid att göra. <br>
+
+    <img src="img/problem_med_anpassning_till_storlek.PNG" alt="">
+    <img src="img/förbättring_av_layout.PNG" alt="">
+
+    Samtidgt har jag också lagt till mer innehåll och tänkt på vilka taggar jag använt för att göra detta. Jag har till exempel funderat mellan val av olika h-taggar för att visa vilken typ av rubrik som texten är. Utöver detta har jag likt ovan justerat textstyckenas utseende med hjälp av olika media-queries. Att göra dessa saker tyckte jag var ganska enkelt och jag har därför inte lagt större fokus vid att dokumentera just detta. Detta är vidare anledningen till varför jag inte skapat särsklilt många objekt under de tidgare lektionerna utan snarare fokuserat på mer komlicerade saker som js-kod komplicerad css-styling och mer detaljerade saker. Exemepl på detta kan exemplvis vara mit diamond-grid och min snabb-bknings-meny och min share-buttons-menu. Även då detta kanske inet varit det huvudsakliga fokuset med uppgiften upplever jag att jag utvecklat mina kunskaper mycket inom dessa områden och att jag genom att kolla videogenomgångar och online-sidor fått en bättre förståelse för hur amn skapar olika sidor och tylar dem. Här upplever jag att min inloggningssida har varit väldigt värdefull både i css-kod och i koden som jag genom genomgången lärde mig skriva. Jag upplever mig cokså ha förstått de mindre skillnade som det innebär att använda j-query istället för rent js som att man sitället för att skriva  document.querySelector exemplvis kan skriva ett dollartecken.<br> 
+
+    Något som jag under lektionstillfälle 12 hade problem med var utöver detta att skriva js-koden till min väder-sida där jag egentligen velat använda mig av event för att registerar speciella klick. Då jag hade begränsad tid och var tvungen att fokusera på andra delar (jag hade redan skrivit mycket java-script) valde jag dock att lösa det hela på ett mindre effekivt men lika funktionsdugligt sätt genom att istället skriva flera funktioner och ge objekten olika klasser. SAmtidgt som jag gjorde detta strukturerade jag upp mitt css-dokument och placerade mina media-queries bättre för att de inte felkatikt skulle skriva över varrandra. I bästa fall borde man placera dem nederst i dokumentet men då detta blir ganska osimidigt när man arbetar med att styla objekten som ligger i närheten av varran tyckte jag inte detta varit helt nödvändigt i arbetet. Detta var dock något som jag hade problem med när jag stylade min footer för oliak layouter och jag fick därför arbeta och kolla på många olika ställen. Detta berodde dock också på att jag skrivit mycket kod för anpassning till skärmbredd coh därmed hade många förändringar i grid-systemens utseenden. I vissa fall visade det helt enkelt vara sig så att jag missat i stylingen för själva elemntet i sig och inte enbart den för dess grid-area. Med js- hade jag cokså ett problem som berodde på att jag saknade ett objekt på denna sidan: detta löste jag genom koden som visas nedan.   <br> 
+
+    <img src="img/problem_med_js.PNG" alt="">
+    <img src="img/lösning_problem_js.PNG" alt="">
+
+    Jag la även en mindre tid på att skapa en kontakta_oss ruta och etn nyhetsbrevsruta. Detta var dock kunskap som jag redan behärksade tack vare de tidgare delar som jag gjort och detta är därför inget jag kommer belysa särkslit mycket här i dokumnetationen. Eftersom jag inte ville ha ett riktigt nummer hittade jag e sida med nummer som inte existerar och använde ett av dessa. För att styla texten i dessa använde jag även ett kommando så att de blev responsivt med med en specefik max-gräns.
+
+    <img src="img/nummer_utan_person.PNG" alt="">
+    
+    <img src="img/problem_med_skärmvidd_löst.PNG" 
+    >
+
+    <img src="img/textstorlek.PNG" alt="">
+    
 
 
+    Jag fortsatte även arbetet med att skapa snabbgenvägar med info på min huvudsida. Primärt hade jag tänkt att ha en horisontell scrollbar för att kunna visa de objekt eftersom de inte alla fick plats brevid varran horisontellt. Men då detta inte blev särsklit snyggt valde jag istället att ha en design där dess placering skiljer åt mellan enheter. På telefoner vill jag att de alla ska hamna på en rad vertikalt och täcka hela skärmbredden medan jag på ipad eller liknade vill att det ska vara två rader och i fullskärm på datorn skulle alla vara på en rad. För att framhäva kontrasten mellan bilderna och texten valde jag att lägga en overlay på bildrna som framhävde texten. Efterosm att detta lite döljde bilderna kom jag fram till att det skulle var bäst att först visa denna när man hovrade över kortet. På telefoner fanns dock inte denna möjligheten och jag fick därför ha overlayn där hela tiden. Det jag här missade att ta hänsyn till som jag tänkt på i efterhand vara att man inet heller kan göra detta på en ipad. Eftersom jag skrev koden utan dubbla skärmar och alltså hela tiden visat webbsidan i halvskärm missade jag alltså detta och denna skärmvidden är nu anpassad för smalare dator-skärmar eller för de som likt jag visar hemsidan i halvskärm. Vidare är detta genomgående och jag skulle därför hävda att hela min webbsida är mer anpassad till halvskärm än till helskärm. Telefonvidden har jag dock fokuserat på separat och kontrollerat med inspektorn coh med min faktiska telefon. <br>
 
+    <img src="img/skapande_av_bild_sektions.PNG" alt="">
+    <img src="img/bilder_som_blir_väldigt_smala.PNG" alt="">
+    <img src="img/förbättring_i_ux.PNG" alt="">
+    <img src="img/kan_inte_hovra_mobil.PNG" alt="">
 
+    Jag valde även att göra en liknade sak på min erbjudande-sida där jag även här funderade på just detta. Till en början planerade jag att blurra bilderna och på så vis framhäva texten med då detta var komlicerat utan att blurra hela div-elementet valde jag att följa smama tankesätt som på startsidan med mina kort med information om olika hotell. Tyvärr hade jag inte tid att byta ut texten mot något annat än lorem. Det var nämligen nog med jobb med att bara hitta passande bilder. De två översta bilderna har som du kan se straka kontaster och en sida med mörkare bakgrund. Jag hade därför tänkt utnyttja dessa för att slippa lyfta fram texten på något annat sätt, men det var inte möjligt att hitta några andra lika bra passande bilder som dessa.<br>
 
-    <h3>Lektion vecka 12</h3>
-    <!-- Fyll på med dokumentation här. -->
+    Eftersom jag dock redan lagt ned tid på att styla dessa och försöka hitta en snabbt men mindre bra lösning till problemet ovan var det lite störande att helt behöva överge denna idén på grund av tidsbristen. 
 
+    <img src="img/fundering_kring_utseende.PNG" alt="">
+    
+   
     <h2>4. Testning</h2>
     <!-- Testa i Chrome + Firefox eller Safari (på både dator och mobil). Skiljer sig resultatet? Har du behövt anpassa ditt kod/innehåll efter de olika webbläsarna? Hur gick valideringen? Vad säger contrastchecker.com om text/bakgrundsfärg? Hur ser resultatet ut på en riktig telefon? -->
 
@@ -458,7 +518,13 @@ Nedan visas en bild från hur jag systematiskt genom att skapa ett helt nytt css
 
 
 
-    När jag testade kontarserna mellan de olika färgkombinationer jag använt fick jag också högt betyg på alla kombinationer mellan text och bakgrund. Det jag dock insåg var att jag troligtvis borde byta en av bilderna för vackert väder på vädersidan då kontrasten just här blivit dålig. Eftersom tillgången på bilder dock är begränsad samtidgt som jag vill undvika att byta textfärg är jag dock osäker på om jag ska byta bild. Det är dock ett förbättringsområde som man kan se över. Att ge lite box-shadow hade möjligtvis kunnat hjälpa.
+    När jag testade kontarserna mellan de olika färgkombinationer jag använt fick jag också högt betyg på alla kombinationer mellan text och bakgrund. Det jag dock insåg var att jag troligtvis borde byta en av bilderna för vackert väder på vädersidan då kontrasten just här blivit dålig. Eftersom tillgången på bilder dock är begränsad samtidgt som jag vill undvika att byta textfärg är jag dock osäker på om jag ska byta bild. Det är dock ett förbättringsområde som man kan se över. Att ge lite box-shadow hade möjligtvis kunnat hjälpa. När jag fortsatte arbeta med projektet under kommande lektioner lade jag stort fokus vid att bilderna skulle ha bra kontrast mot texten. JAg valde därför att när man hovrar över bilden ge den en overlay med en färg som passar bättre ihop med texten. Egentligen ville jag på min erbjudande-sida ha en ruta som visades innan man hovrade, men detta var problematiskt eftersom att jag samtidgt ville styla denna på ett sätt när man hovrade över den. Isåfall skulle jag behövt skriva js-kod för att man skulle kunna få effekterna av att hovra över båda. Utöver detta passade jag på att lägga in en länkt till ett specieltt id på en av de andra sidorna.<br>
+
+    <img src="img/länk_till_id_på_annan_sida.PNG" alt="">
+
+    Utöver detta märkte jag att ma kan klicka på länkarna i min-share-buttons-menu trots att den inte är aktiverad. AJg försökte lösa detta med dispaly:none och även med pointer-events: none; dock båda med så stora problem i hur objekten positionerades eller hur utseendet såg it när man hovrade att jag beslöt att lämna denna buggen och prioritera andra delar av sidan.<br>
+
+    <img src="img/länkar_som_var_klickbara_när_döljda.PNG" alt="">
     
 
 
@@ -467,9 +533,15 @@ Nedan visas en bild från hur jag systematiskt genom att skapa ett helt nytt css
     Nyanserat: "hur hade det blivit om jag istället hade...?"
     Konkreta förbättringsförslag i produkt + process. -->
 
-        Något som jag gärna hade lagt ned tid på att implementera hade varit att få inloggningssidan att faktiskt fungera. Detta skulel dock kräva kunskaper inom webbserverprorammering som jag nu inte har.
+        Något som jag gärna hade lagt ned tid på att implementera hade varit att få inloggningssidan att faktiskt fungera. Detta skulle dock kräva kunskaper inom webbserverprorammering som jag nu inte har. Jag hade exemplvis även planerat att lägga in en API för att visa det riktiga vädret på mina orter med jag hade som sagt ont om tid och mycket annat att fokusera på.<br>
 
-        Jag tror vidare att jag också lagt ned för mycket tid på just java-script och mer komlicerade kodningsproblem vilket har tagit tid från att faktiskt designa själva sidan med hjälp av grid och flex mm. 
+        Jag tror vidare att jag också lagt ned för mycket tid på just java-script och mer komlicerade kodningsproblem vilket har tagit tid från att faktiskt designa själva sidan med hjälp av grid och flex mm. Jag kan därför även ifrågasätta min tidsplanering där jag inet egentligen hade tänkt att lägga upp projektet på detta viset. Jag tror dock att planeringen så som jag skrev den under de tidiga lektionerna inte var optimal och jag föredrog att istället sluföra de små delar som jag fokuserat på. Att jag valde att göra såhär medförde att jag var tvungen att skapa stora delar i slutet av projketet, men då jag redan lärt mig mycket från mina mer detaljerade delar tror jag att detta förflöt bättre än om jag hade fullföljt planeringen och skapat en sida på varje lektion. <br>
+
+        Jag upplever också att jag haft lite för lite tid för att faktiskt fylla ut alla delar med innehåll och texterna som står på et fåtal av sidorna inehåller därför lite lorem och i vissa fall är texten densamma på olika delar. Då jag känner att skriva denna texten egentligen inte borde vara något som värdesätts i kursen valde jag att lägga min tid på att arbeta just med styling och java-script istället för att förfatat ihop texter. Jag kunde ju givetvis inte heller ta texten från någon annan webbsida då deras innehåll säkerligen falller under copy right skydd. <br>
+
+        Utöver detta känner jag att jag gärna att mitt projekt nått en standard som jag kan acceptera trots att många saker inte blivit precis som jag från början velat.
+
+
 
 </body>
 </html>
