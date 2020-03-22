@@ -2316,7 +2316,7 @@ footer{
         "a8 a8 a8 a8"
         "fo fo fo fo"
         ;
-        grid-template-rows: 10vh 43vw 250vh 220vh 220vh 220vh 220vh 220vh 220vh 250vh 65vh;
+        grid-template-rows: 10vh 43vw 265vh 235vh 235vh 235vh 235vh 235vh 235vh 250vh 65vh;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
@@ -2949,7 +2949,6 @@ footer{
     .hotel_text_container4{
         grid-area: n4;
         position: relative;
-        width: 100%;
         left: 0vw;
     }
     
