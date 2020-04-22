@@ -317,7 +317,6 @@ body{
     height: 12vh;
     top: 24vh;
     right: -3vw;
-    transform: rotate(90deg);
     z-index: 3;
 }
 
@@ -509,7 +508,6 @@ body{
         height: 16vw;
         top: 9vh;
         right: 5vw;
-        transform: rotate(90deg);
         z-index: 3;
     }
     
@@ -559,7 +557,6 @@ body{
         height: 18vw;
         top: 9vh;
         right: 5vw;
-        transform: rotate(90deg);
         z-index: 3;
     }
     
@@ -703,7 +700,6 @@ body{
         height: 35vh;
         top: 12vh;
         right: 9vw;
-        transform: rotate(90deg);
         z-index: 3;
     }
     
