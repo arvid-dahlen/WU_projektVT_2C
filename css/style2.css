@@ -14,9 +14,10 @@ body{
     height:100vh;
     min-height:550px;
     position: relative;
+    overflow: hidden;
 }
 
-  .gridwrapper-index{
+.gridwrapper-index{
     display: grid;
     grid-template-areas:
     "na na na na"
@@ -31,7 +32,7 @@ body{
     ;
     height: 100vh;
     width: 100vw;
-    grid-template-rows: 10vh 60vh 54vh 50vh 75vh 220vh 40vh 40vh 170vh;
+    grid-template-rows: 10vh 60vh 59vh 50vh 75vh 220vh 40vh 45vh 190vh;
     background: linear-gradient(rgb(0, 0, 0), rgba(174, 23, 166, 0.776));
     background: whitesmoke;
     grid-gap: 0.7vh;
@@ -118,7 +119,8 @@ body{
     transform: translateX(100%);
     transition: transform 0.5s ease;
     background: rgb(40, 201, 255);
-    z-index: 2;
+    z-index: 10;
+    
 }
 
 
@@ -177,7 +179,7 @@ body{
     }
 }
 
-@media screen and (min-width: 964px) {
+@media screen and (min-width: 1154px) {
     
     
     .meny{
@@ -246,7 +248,7 @@ body{
 }
 
 .menyruta{
-    height: 40vh;
+    height: 42vh;
     width: 70vw;
     position: relative;
     top: 17vw;
@@ -359,7 +361,7 @@ body{
     font-size: 1.5vh;
     display: block;
     width: 40vw;
-    margin: 15px;
+    margin: 10px;
     padding-left: 2vw;
     font-family: 'Mukta', sans-serif;
 }
@@ -370,11 +372,11 @@ body{
 
 
 
-.main_index{
+.article_index{
     grid-area: ma;
 }
 
-.main_index h2{
+.article_index h2{
     color: rgb(0, 0, 0);
     font-size: 5vh;
     display: inline-block;
@@ -382,14 +384,14 @@ body{
     margin-right: 10vw;
 }
 
-.main_index h3{
+.article_index h3{
     text-align: left;
     font-size: 3vh;
     margin-left: 20px;
     margin-top: 2vh;
 }
 
-.main_index p{
+.article_index p{
     color: rgb(0, 0, 0);
     font-size: 2vh;
     margin: 20px;
@@ -469,6 +471,11 @@ body{
     opacity: 1;
 }
 
+.filter p{
+    position: relative;
+    top: -5vh;
+}
+
 
 @media screen and (min-width: 400px) {
     .bilder-div{
@@ -492,7 +499,8 @@ body{
     }
 
     .gridwrapper-index{
-        grid-template-rows: 10vh 60vh 54vh 50vh 70vh 105vh 40vh 40vh 170vh;
+        grid-template-rows: 10vh 60vh 54vh 50vh 85vh 105vh 40vh 40vh 170vh;
+        height: 100vh;
     }
 
     .mindre_bild{
@@ -523,15 +531,21 @@ body{
     }
 
     .restyper p{
-        font-size: 2.5vh;
+        font-size: 2vh;
+        margin: 10px;
     }
-    
-    
+}
+
+@media screen and (min-width: 650px) {
+    .restyper p{
+        font-size: 2.5vh;
+        margin: 10px;
+    }
 }
 
 @media screen and (min-width: 750px) {
     .gridwrapper-index{
-        grid-template-rows: 10vh 80vh 40vw 50vw 50vh 105vh 40vh 44vh 75vh;
+        grid-template-rows: 10vh 80vh 50vw 70vw 60vh 105vh 40vh 44vh 75vh;
         grid-template-columns: 6fr 1fr 1fr 3fr;
     }
 
@@ -574,7 +588,7 @@ body{
     .about_corona h4{
         margin-left: 12vw;
         display: block;
-        width: 30vw;
+        width: 25vh;
     }
 
     .about_corona p{
@@ -582,10 +596,10 @@ body{
         display: block;
         width: 30vw;
         position: relative;
-        top: -15vh;
+        top: -22vh;
     }
 
-    .main_index p{
+    .article_index p{
         color: rgb(0, 0, 0);
         font-size: 2vh;
         margin: 20px;
@@ -621,7 +635,7 @@ body{
     }
 
     .gridwrapper-index{
-        grid-template-rows: 10vh 85vh 50vh 70vh 50vh 65vh 45vh 44vh 150vh;
+        grid-template-rows: 10vh 85vh 50vh 70vh 50vh 65vh 45vh 35vh 150vh;
 
     }
     
@@ -632,17 +646,23 @@ body{
     .about_corona p{
         margin-left: 12vw;
         display: block;
-        width: 30vw;
+        width: 42vh;
         position: relative;
         top: 0;
     }
+
+    .about_corona h4{
+        width: 42vh;
+    }
+
 
     .restyper{
         height: 65vh;
     }
 
     .restyper p{
-        font-size: 4vh;
+        font-size: 3.5vh;
+        max-width: 50vh;
     }
 }
 
@@ -652,7 +672,7 @@ body{
 @media screen and (min-width: 1050px) {
 
     .gridwrapper-index{
-        grid-template-rows: 10vh 85vh 50vh 70vh 50vh 65vh 45vh 65vh;
+        grid-template-rows: 10vh 85vh 50vh 70vh 50vh 65vh 45vh 40vh;
         grid-template-columns: 6fr 1fr 1fr 3fr;
     }
 
@@ -674,7 +694,7 @@ body{
     .about_corona p{
         margin-left: 12vw;
         display: block;
-        width: 30vw;
+        width: 39vh;
     }
 
     footer{
@@ -688,7 +708,7 @@ body{
     }
 
     .mindre_bild{
-        height: 30vh;
+        height: 22vh;
         position: absolute;
         top: 4vh;
         right: 25vw;
@@ -697,17 +717,31 @@ body{
     }
     
     .mindre_bild1{
-        height: 35vh;
+        height: 30vh;
         top: 12vh;
         right: 9vw;
         z-index: 3;
     }
     
     .mindre_bild2{
-        height: 34vh;
+        height: 25vh;
         top: 29vh;
         right: 25vw;
         z-index: 2;
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .mindre_bild{
+        height: 30vh;    
+    }
+    
+    .mindre_bild1{
+        height: 40vh;
+    }
+    
+    .mindre_bild2{
+        height: 32vh;
     }
 }
 
@@ -732,6 +766,7 @@ body{
 
 .nyhetsbrev input[type="text"]{
     width: 60%;
+    max-width: 50vh;
     display: block;
     margin: 20px 20px;
     padding: 10px;
@@ -751,11 +786,12 @@ body{
     text-transform: uppercase;
     border-radius: 4px;
     cursor:pointer;
+    -webkit-appearance: none;
 }
 
 .kontakta_oss{
     grid-area: a5;
-    height: 40vh;
+    height: 45vh;
     width: 100%;
     background: rgba(158, 158, 158, 0.13);
 }
@@ -806,7 +842,7 @@ body{
     ;
     height: 100vh;
     width: 100vw;
-    grid-template-rows: 10vh 100vh 170vh;
+    grid-template-rows: 10vh 100vh 190vh;
     grid-template-columns: 100vw 1fr 1fr 3fr;
    
     grid-gap: 0.7vh;
@@ -942,6 +978,7 @@ body{
         text-transform: uppercase;
         border-radius: 2px;
         cursor:pointer;
+        -webkit-appearance: none;
     }
     .login-show a{
         display:inline-block;
@@ -965,6 +1002,7 @@ body{
         text-transform: uppercase;
         border-radius: 2px;
         cursor:pointer;
+        -webkit-appearance: none;
     }
     .credit {
         position:absolute;
@@ -1084,6 +1122,7 @@ body{
       position: absolute;
       right: 4.5vw;
       cursor: pointer;
+      -webkit-appearance: none;
   }
   .login-show a{
       display: inline-block;
@@ -1111,6 +1150,7 @@ body{
       position: absolute;
       right: 20px;
       cursor: pointer;
+      -webkit-appearance: none;
   }
   .credit {
       position: absolute;
@@ -1526,14 +1566,14 @@ p{
     ;
     height: 100vh;
     width: 100vw;
-    grid-template-rows: 10vh 40vh 40vh 62vh 62vh 62vh 62vh 62vh 62vh 62vh 80vh 200vh;
+    grid-template-rows: 10vh 55vh 40vh 62vh 62vh 62vh 62vh 62vh 62vh 62vh 80vh 190vh;
     grid-template-columns: 100vw 1fr 1fr 1fr;
    
     grid-gap: 0.7vh;
     overflow-x: hidden;
     overflow-y: scroll;
     position: fixed;
-    background: linear-gradient(rgb(0, 0, 0), rgba(174, 23, 166, 0.776));
+    background: white;
     z-index: 1;
 
 }
@@ -1541,12 +1581,14 @@ p{
 .weather_image{
     grid-area: he;
     height: 50vw;
-    max-height: 60vh;
     background-image: url(../img/mihaly-koles-uPGzuW2tvvA-unsplash.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
+
 }
+
+
 
 .weather_image h1{
     display: inline;
@@ -1555,7 +1597,7 @@ p{
     padding: 2vh;
     padding-left: 3vh;
     padding-right: 100%;
-    font-size: min(7vw, 9vh);
+    font-size: 7vw;
     color: rgb(25, 102, 112);
     font-family: 'Titillium Web', sans-serif;
     box-shadow: 12px 10px 5px -8px steelblue;
@@ -1563,7 +1605,13 @@ p{
 }
 
 
-.main_weather{
+@media screen and (min-width: 1200px) {
+    .weather_image h1{
+    font-size: 9vh;
+    }
+}
+
+.article_weather{
     height: 60vh;
     width: 100vw;
     grid-area: ma;
@@ -1574,7 +1622,7 @@ p{
     flex-direction: column;
 }
 
-.main_weather h2{
+.article_weather h2{
     color: rgb(25, 102, 112);
     margin-top: 4vh;
     margin-left: 4vh;
@@ -1585,7 +1633,7 @@ p{
     max-width: 50vw;;
 }
 
-.main_weather h4{
+.article_weather h4{
     color: rgb(25, 102, 112);
     margin-left: 4vh;
     margin-top: 1vh;
@@ -1597,7 +1645,7 @@ p{
     max-width: 50vw;;
 }
 
-.main_weather p{
+.article_weather p{
     color: rgb(25, 102, 112);
     margin-left: 4vh;
     margin-top: 1vh;
@@ -1671,7 +1719,7 @@ p{
         ;
         height: 100vh;
         width: 100vw;
-        grid-template-rows: 10vh min(45vw, 60vh) 55vh 70vh 70vh 70vh 90vh 160vh ;
+        grid-template-rows: 10vh 45vw 55vh 70vh 70vh 70vh 90vh 160vh ;
         grid-template-columns: 1fr 1fr 1fr 1fr;
        
         grid-gap: 0.7vh;
@@ -1688,10 +1736,15 @@ p{
         z-index: -3;    
     }
 
-    .main_weather{
+    .article_weather{
         height: 52vh;
         padding-top: 5vh;
         top: 9vh;
+    }
+
+    .weather_image{
+        height: 49vw;
+        max-height: 55vh;
     }
 
 }
@@ -1721,7 +1774,7 @@ p{
         z-index: -3;
     }
 
-    .main_weather{
+    .article_weather{
         height: 45vh;
         padding-top: 5vh;
         top: 9vh;
@@ -1834,7 +1887,7 @@ p{
 
 
 .forecast{
-    margin-top: 5vh;
+    margin-top: 0vh;
     padding: 0;
 }
 
@@ -2019,6 +2072,7 @@ footer{
     padding: 70px 0;
     box-sizing: border-box;
     background-color: rgba(9, 73, 133, 0.776);
+    height: fit-content;
 }
 
 .inner_footer{
@@ -2154,7 +2208,7 @@ footer{
     ;
     height: 100vh;
     width: 100vw;
-    grid-template-rows: 10vh 43vw 58vw 20vh 1fr 320vh 280vh 280vh 320vh 280vh 280vh 280vh 280vh 170vh;
+    grid-template-rows: 10vh 43vw 58vw 20vh 1fr 320vh 280vh 280vh 280vh 280vh 280vh 310vh 290vh 190vh;
     grid-template-columns: 6fr 1fr 1fr 3fr;
     background: whitesmoke;
     grid-gap: 0.7vh;
@@ -2280,12 +2334,14 @@ footer{
 
 @media screen and (min-width: 500px) {
     .item h2{
-      font-size: 1.5vh;
-      }
-  }
+    font-size: 1.5vh;
+    }
+    .gridwrapper-orter{
+        grid-template-rows: 10vh 43vw 58vw 20vh 1fr 240vh 220vh 220vh 220vh 220vh 220vh 280vh 250vh 190vh;
+    }
+}
 
-@media screen and (min-width: 1000px) {
-
+@media screen and (min-width: 1000px) { 
 
     .diamond-grid-orter{
         width: 35vw;
@@ -2312,7 +2368,7 @@ footer{
         "a8 a8 a8 a8"
         "fo fo fo fo"
         ;
-        grid-template-rows: 10vh 43vw 265vh 235vh 235vh 235vh 235vh 235vh 235vh 250vh 65vh;
+        grid-template-rows: 10vh 45vw 205vh 195vh 200vh 200vh 190vh 190vh 180vh 250vh 65vh;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
@@ -2322,6 +2378,7 @@ footer{
         background-repeat: no-repeat;
         position: relative;
         left: -20vw;
+        top: 20vh;
     }
 
     .black_slopes{
@@ -2428,6 +2485,7 @@ footer{
 
 .article_orter h1{
     margin: 30px;
+    margin-right: 90vw;
     padding-right: 40px;
     color: rgb(15, 15, 15);
     font-family: 'Titillium Web', sans-serif;
@@ -2523,6 +2581,8 @@ footer{
 }
 
 @media screen and (min-width: 500px) {
+
+    
     .skidinfo-grid{
         display: grid;
         grid-template-areas: 
@@ -2551,6 +2611,23 @@ footer{
 }
 
 @media screen and (min-width: 900px) {
+    .article_image_orter{
+        height: auto;
+        width: 85vh;
+        max-height: 60vh;
+        margin-left: calc((100vw - 85vh)/2);
+        top: 40vh;
+        margin-right: 15vw;
+    }
+
+    .article_image_orter_small{
+        width: 55vh;
+        height: auto;
+        margin-left: calc((100vw - 55vh)/2);
+        top: 40vh;
+    }
+
+
     .skidinfo-grid{
         grid-template-areas: 
         "n1 n2 n3 n4";
@@ -2626,7 +2703,7 @@ footer{
     ;
     height: 100vh;
     width: 100vw;
-    grid-template-rows: 10vh 30vh 165vh 220vh 50vh 170vh;
+    grid-template-rows: 10vh 35vh 145vh 220vh 50vh 170vh;
     background: linear-gradient(rgb(0, 0, 0), rgba(174, 23, 166, 0.776));
     background: whitesmoke;
     grid-gap: 0.7vh;
@@ -2774,7 +2851,7 @@ footer{
     margin-left: 5vw;
     margin-top: 2vh;
     font-family: 'Mukta', sans-serif;
-    font-size: min(2vw, 2vh);
+    font-size: 0.99vh;
     max-width: 40vw;
 }
 
@@ -2855,19 +2932,20 @@ footer{
 
 @media screen and (min-width: 400px) {
     .gridwrapper-erbjudanden{
-        grid-template-rows: 10vh minmax(60vw, 60vh) 115vh 240vh 50vh 170vh;
+        grid-template-rows: 10vh minmax(60vw, 60vh) 125vh 240vh 50vh 170vh;
     }
   
     .hotels section{
         height: 30vh;
         filter: none;
         margin-bottom: 10vh;
+        z-index:-1;
     }
 
     .hotel_text_container{
         opacity: 0;
         padding: 2vh 0;  
-        z-index: 2;
+        z-index: 4;
         height: 26vh;
         width: 100%;
     }
@@ -2875,7 +2953,7 @@ footer{
     .hotel_text_container:hover{
         transition: 0.15s ease-in;
         opacity: 1;
-        z-index: 2; 
+        z-index: 4; 
     }
 
     .hotel_text_container p{
@@ -2974,6 +3052,14 @@ footer{
         position: relative;
     }
 
+
+
+    
+
+}
+
+@media screen and (min-width: 930px) {
+
     .resetips p{
         max-width: 40vh;
         display: block;
@@ -2983,7 +3069,6 @@ footer{
         position: absolute;
         left: 50vh;
     }
-
     #by_the_side1{
         position: relative;
         bottom: 72vh;
@@ -2996,5 +3081,4 @@ footer{
         max-width: 40vh;
     }
 
-    
 }
