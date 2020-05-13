@@ -1,3 +1,11 @@
+const Error1 = ()=>{
+    document.querySelector(".close").addEventListener('click',() => {
+        document.querySelector(".error_message").classList.toggle("display_none")
+    });
+}
+
+Error1();
+
 
 
 const Slide = ()=>{
@@ -351,6 +359,37 @@ const showFront8 = ()=>{
     });
 }
 showFront8(); 
+
+
+
+
+window.addEventListener('load', ()=> {
+    let long;
+    let lat;
+    let temperatureDegree = document.querySelector(".temperature-degree");
+
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(position => {
+            long = position.coords.longitude;
+            lat = position.coords.latitude;
+
+            const proxy = 'https://cors-anywhere.herouapp.com/';
+            const api = `${proxy}https://api.darksky.net/forecast/e2bd493d944c66a08e8216b9c45611cf/${lat},${long}`;
+        
+            fetch(api)
+            .then(response =>{
+                return response.json();
+            })
+            .then(data => {
+                const {temperature} = data.currently;
+                temperatureDegree.textContent = temperature
+        
+            });
+        
+        });
+
+    }
+});
 
 
 

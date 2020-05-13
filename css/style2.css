@@ -4,6 +4,46 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 
+.error_message{
+  display: none; 
+  position: relative; 
+}
+
+
+.error_message { 
+    display: inherit;
+    height: 15vh;
+    width: 60vw;
+    position: fixed;
+    background: whitesmoke;
+    border: 2px solid rgb(0, 174, 255);
+    border-radius: 10px;
+    top: 40vh;
+    left: 20vw;
+    z-index: 12;
+    padding: 4vh;
+    padding-top: 10vh;
+    box-shadow: 2vh 10vh 100vh 50vh rgba(41, 49, 54, 0.747);
+}
+
+_:-ms-fullscreen, .error_message h2{ 
+    font-family: 'Mukta', sans-serif;
+    font-size: 2.5vh;
+}
+
+.display_none{
+    display: none;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -665,9 +705,6 @@ body{
         max-width: 50vh;
     }
 }
-
-
-
 
 @media screen and (min-width: 1050px) {
 
