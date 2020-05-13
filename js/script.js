@@ -1,10 +1,7 @@
-const Error1 = ()=>{
-    document.querySelector(".close").addEventListener('click',() => {
-        document.querySelector(".error_message").classList.toggle("display_none")
-    });
-}
 
-Error1();
+
+
+
 
 
 

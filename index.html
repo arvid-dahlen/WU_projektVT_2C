@@ -21,8 +21,11 @@
     <div class="gridwrapper-index">
 
         <div class="error_message">
-            <div class="close">+</div>
-            <h2>Du visar sidan i Internet Explorer. För bästa användarupplevelse bör du använda en annan webbläsare.</h2>
+            <div class="wave">
+                <div class="close"><h3>+</h3></div>
+                <h2 class="larger">Du visar sidan i Internet Explorer. </h2>
+                <h2 class="smaller"> För bästa användarupplevelse bör du använda en annan webbläsare. </h2>
+            </div>
         </div>
 
 
@@ -239,19 +242,14 @@
                 </div>
     </footer>
 
+</div>
 
+<script type="text/javascript">
+    if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent))
+        document.write('<script src="js/script_ie.js"><\/script>');
+    else
+    document.write('<script src="js/script.js"><\/script>');
+</script>
 
-
-
-
-
-
-
-
-
-
-
-    </div>
-    <script src="js/script.js"></script>
 </body>
 </html>
