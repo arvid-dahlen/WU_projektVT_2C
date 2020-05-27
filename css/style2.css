@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Mukta');
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
-
 .error_message{
   display: none; 
   position: relative; 
@@ -116,7 +115,6 @@ body{
     overflow-x: hidden;
     overflow-y: scroll;
     position: fixed;
-   
 }
 
 .nav{
@@ -200,7 +198,6 @@ body{
     
 }
 
-
 .meny li{
     font-weight: 300;
     margin: 10px;
@@ -257,8 +254,6 @@ body{
 }
 
 @media screen and (min-width: 1154px) {
-    
-    
     .meny{
         list-style: none;
         display: flex;
@@ -276,7 +271,6 @@ body{
         transition: transform 0.5s ease;
         background: rgba(255, 255, 255, 0);       
     }
-
     nav{
         display: flex;
         justify-content: space-around;
@@ -305,14 +299,12 @@ body{
         width: 13vw;
         right: 30px;
     }
-
     .list_stil{
         font-size: 2.5vh;
     }
 }
 
 .img-sektion{
-
     width: 100vw;
     background-image: url(../img/pamela-saunders-unsplash.jpg);
     background-size: contain;
@@ -335,11 +327,6 @@ body{
     margin-bottom: 20vh;
     z-index: 2;
 }
-
-
-
-
-
 
 .about_corona{
     background: whitesmoke;
@@ -406,8 +393,6 @@ body{
     z-index: 2;
 }
 
-
-
 .restyper::after{
     content: "";
     position: absolute;
@@ -431,8 +416,6 @@ body{
     box-shadow: 12px 10px 5px -8px rgb(245, 144, 77);
 }
 
-
-
 .restyper p{
     color: whitesmoke;
     font-size: 1.5vh;
@@ -446,8 +429,6 @@ body{
 .restyper p:hover{
     color: rgb(245, 144, 77);
 }
-
-
 
 .article_index{
     grid-area: ma;
@@ -491,7 +472,6 @@ body{
     width: 100vw;   
 }
 
-
 .bilder_i_div{
     height: 45vh;
     width: 95vw;
@@ -499,10 +479,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 2%;
-
 }
-
-
 
 .bilder_i_div h2{
     color: whitesmoke;
@@ -540,7 +517,7 @@ body{
     width: 95vw;
     position: absolute;
     background: rgba(99, 2, 99, 0.301);
-    opacity: 1;
+    opacity: 0;
     border-radius: 2%;
 }
 
@@ -552,7 +529,6 @@ body{
     position: relative;
     top: -5vh;
 }
-
 
 @media screen and (min-width: 400px) {
     .bilder-div{
@@ -586,7 +562,6 @@ body{
         top: 4vh;
         right: 25vw;
         z-index: 2;
-    
     }
     
     .mindre_bild1{
@@ -641,7 +616,6 @@ body{
         top: 4vh;
         right: 25vw;
         z-index: 2;
-    
     }
     
     .mindre_bild1{
@@ -732,7 +706,6 @@ body{
         width: 42vh;
     }
 
-
     .restyper{
         height: 65vh;
     }
@@ -778,7 +751,6 @@ body{
     .menyruta{
         position: relative;
         top: 35vh;
-        
     }
 
     .mindre_bild{
@@ -787,7 +759,6 @@ body{
         top: 4vh;
         right: 25vw;
         z-index: 2;
-    
     }
     
     .mindre_bild1{
@@ -837,7 +808,6 @@ body{
     box-shadow: 3px 10px 5px -8px rgb(255, 255, 255);
 }
 
-
 .nyhetsbrev input[type="text"]{
     width: 60%;
     max-width: 50vh;
@@ -870,7 +840,6 @@ body{
     background: rgba(158, 158, 158, 0.13);
 }
 
-
 .kontakta_oss h2{
     color: rgb(131, 127, 127);
     margin-top: 5vh;
@@ -897,48 +866,29 @@ body{
     color: rgb(182, 94, 21);
 }
 
-
-
-
-
-
-
-
-
-
 .gridwrapper-min-sida{
     display: grid;
     grid-template-areas:
     "na na na na"
     "se se se se"
-    "fo fo fo fo"
-    
-    ;
+    "fo fo fo fo";
     height: 100vh;
     width: 100vw;
     grid-template-rows: 10vh 100vh 190vh;
     grid-template-columns: 100vw 1fr 1fr 3fr;
-   
     grid-gap: 0.7vh;
     overflow-x: hidden;
     overflow-y: scroll;
     position: fixed;
     background: linear-gradient(rgb(0, 0, 0), rgba(174, 23, 166, 0.776));
     z-index: 1;
-
 }
 
-
 @media screen and (min-width: 750px) {
-
     .gridwrapper-min-sida{
         grid-template-rows: 10vh 100vh 65vh;
     }
 }
-
-
-
-
 
 @media screen and (max-width: 792px) {
     a{
@@ -961,7 +911,6 @@ body{
         z-index: -1;
         border-radius: 10%;
         max-width: 300px;
-        
     }
 
     .login-reg-panel h2{
@@ -991,9 +940,11 @@ body{
         position: relative;
         display: none;
     }
+
     .login-reg-panel{
         color:#B8B8B8;
     }
+
     .login-reg-panel #label-login, 
     .login-reg-panel #label-register{
         border:1px solid #9E9E9E;
@@ -1004,6 +955,7 @@ body{
         border-radius:3px;
         cursor:pointer;
     }
+
     .login-info-box{
         width: 130%;
         padding: 0 50px;
@@ -1012,6 +964,7 @@ body{
         position: absolute;
         text-align: left;
     }
+
     .register-info-box{
         width:130%;
         padding:0 50px;
@@ -1030,10 +983,12 @@ body{
         text-align:left;
         padding:50px;
     }
+
     .show-log-panel{
         display:block;
         opacity:0.9;
     }
+
     .login-show input[type="text"], .login-show input[type="password"]{
         width: 87%;
         display: block;
@@ -1054,6 +1009,7 @@ body{
         cursor:pointer;
         -webkit-appearance: none;
     }
+
     .login-show a{
         display:inline-block;
         padding:15px 0;
@@ -1067,6 +1023,7 @@ body{
         border: 1px solid #b5b5b5;
         outline: none;
     }
+
     .register-show input[type="button"] {
         width: 99%;
         background: #444444;
@@ -1078,6 +1035,7 @@ body{
         cursor:pointer;
         -webkit-appearance: none;
     }
+
     .credit {
         position:absolute;
         bottom:10px;
@@ -1092,161 +1050,173 @@ body{
         letter-spacing: 1px;
         z-index: 99;
     }
+
     a{
-    text-decoration: none;
-    color: #eaeaea;
+        text-decoration: none;
+        color: #eaeaea;
     }
 }
-
-
 
 @media screen and (min-width: 793px) {
-  .login-reg-panel{
-      position: relative;
-      top: 20%;
-      transform: translateY(-50%);
-      text-align:center;
-      width: 70%;
-      right:0;
-      left:0;
-      margin: auto;
-      height: 60vh;
-      background-color: rgba(30,30,30, 0.9);
-      grid-area: se;
-      z-index: -1;
-      border-radius: 0%;
+    .login-reg-panel{
+        position: relative;
+        top: 20%;
+        transform: translateY(-50%);
+        text-align:center;
+        width: 70%;
+        right:0;
+        left:0;
+        margin: auto;
+        height: 60vh;
+        background-color: rgba(30,30,30, 0.9);
+        grid-area: se;
+        z-index: -1;
+        border-radius: 0%;
+        }
+
+    .white-panel{
+        background-color: rgba(255,255, 255, 1);
+        height: 500px;
+        position:absolute;
+        top:-50px;
+        width:50%;
+        right:calc(50% - 50px);
+        transition:.3s ease-in-out;
+        z-index:0;
     }
-  .white-panel{
-      background-color: rgba(255,255, 255, 1);
-      height: 500px;
-      position:absolute;
-      top:-50px;
-      width:50%;
-      right:calc(50% - 50px);
-      transition:.3s ease-in-out;
-      z-index:0;
-  }
-  .login-reg-panel input[type="radio"]{
-      position:  relative;
-      display: none;
-  }
-  .login-reg-panel{
-      color:#B8B8B8;
-  }
-  .login-reg-panel #label-login, 
-  .login-reg-panel #label-register{
-      border: 1px solid #9E9E9E;
-      padding: 0 5px;
-      width: 150px;
-      display:block;
-      text-align:center;
-      border-radius:3px;
-      cursor:pointer;
-  }
-  .login-info-box{
-      width: 30%;
-      padding: 0 50px;
-      top: 20%;
-      left: 0;
-      position: absolute;
-      text-align: left;
-  }
-  .register-info-box{
-      width: 30%;
-      padding: 0 50px;
-      top: 20%;
-      right: 0;
-      position: absolute;
-      text-align: left;
-      
-  }
-  .right-log{right:50px !important;}
-  
-  .login-show, 
-  .register-show{
-      z-index: 1;
-      display: none;
-      opacity: 0;
-      transition: 0.3s ease-in-out;
-      color: #242424;
-      text-align: left;
-      padding: 50px;
-  }
-  .show-log-panel{
-      display:block;
-      opacity:0.9;
-  }
-  .login-show input[type="text"], .login-show input[type="password"]{
-      width: 90%;
-      display: block;
-      margin: 20px 0;
-      padding: 15px;
-      border: 1px solid #b5b5b5;
-      outline: none;
-  }
-  .login-show input[type="button"] {
-      max-width: 150px;
-      width: 90%;
-      background: #444444;
-      color: #f9f9f9;
-      border: none;
-      padding: 10px;
-      text-transform: uppercase;
-      border-radius: 2px;
-      position: absolute;
-      right: 4.5vw;
-      cursor: pointer;
-      -webkit-appearance: none;
-  }
-  .login-show a{
-      display: inline-block;
-      padding: 10px 0;
-      margin-top: 40px;
-  }
-  
-  .register-show input[type="text"], .register-show input[type="password"]{
-      width: 100%;
-      display: block;
-      margin: 20px 0;
-      padding: 15px;
-      border: 1px solid #b5b5b5;
-      outline: none;
-  }
-  .register-show input[type="button"] {
-      max-width: 150px;
-      width: 100%;
-      background: #444444;
-      color: #f9f9f9;
-      border: none;
-      padding: 10px;
-      text-transform: uppercase;
-      border-radius: 2px;
-      position: absolute;
-      right: 20px;
-      cursor: pointer;
-      -webkit-appearance: none;
-  }
-  .credit {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      color: #3B3B25;
-      margin: 0;
-      padding: 0;
-      font-family: Arial,sans-serif;
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      z-index: 99;
-  }
-  a{
-    text-decoration: none;
-    color: #eaeaea;
-  }
+    
+    .login-reg-panel input[type="radio"]{
+        position:  relative;
+        display: none;
+    }
+
+    .login-reg-panel{
+        color:#B8B8B8;
+    }
+
+    .login-reg-panel #label-login, 
+    .login-reg-panel #label-register{
+        border: 1px solid #9E9E9E;
+        padding: 0 5px;
+        width: 150px;
+        display:block;
+        text-align:center;
+        border-radius:3px;
+        cursor:pointer;
+    }
+
+    .login-info-box{
+        width: 30%;
+        padding: 0 50px;
+        top: 20%;
+        left: 0;
+        position: absolute;
+        text-align: left;
+    }
+
+    .register-info-box{
+        width: 30%;
+        padding: 0 50px;
+        top: 20%;
+        right: 0;
+        position: absolute;
+        text-align: left;
+    }
+
+    .right-log{
+        right:50px !important;
+    }
+    
+    .login-show, 
+    .register-show{
+        z-index: 1;
+        display: none;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+        color: #242424;
+        text-align: left;
+        padding: 50px;
+    }
+
+    .show-log-panel{
+        display:block;
+        opacity:0.9;
+    }
+
+    .login-show input[type="text"], .login-show input[type="password"]{
+        width: 90%;
+        display: block;
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #b5b5b5;
+        outline: none;
+    }
+
+    .login-show input[type="button"] {
+        max-width: 150px;
+        width: 90%;
+        background: #444444;
+        color: #f9f9f9;
+        border: none;
+        padding: 10px;
+        text-transform: uppercase;
+        border-radius: 2px;
+        position: absolute;
+        right: 4.5vw;
+        cursor: pointer;
+        -webkit-appearance: none;
+    }
+
+    .login-show a{
+        display: inline-block;
+        padding: 10px 0;
+        margin-top: 40px;
+    }
+    
+    .register-show input[type="text"], .register-show input[type="password"]{
+        width: 100%;
+        display: block;
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #b5b5b5;
+        outline: none;
+    }
+
+    .register-show input[type="button"] {
+        max-width: 150px;
+        width: 100%;
+        background: #444444;
+        color: #f9f9f9;
+        border: none;
+        padding: 10px;
+        text-transform: uppercase;
+        border-radius: 2px;
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+        -webkit-appearance: none;
+    }
+
+    .credit {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: #3B3B25;
+        margin: 0;
+        padding: 0;
+        font-family: Arial,sans-serif;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        z-index: 99;
+    }
+
+    a{
+        text-decoration: none;
+        color: #eaeaea;
+    }
 }
-
-
 
 .menyruta h1{
     margin-bottom: 3vh;
@@ -1305,8 +1275,6 @@ option{
     font-family: 'Muli', sans-serif;
 }
 
-
-
 .datum:before{
     content: '\f078';
     font-family: "FontAwesome";
@@ -1357,8 +1325,6 @@ option{
 
 .var:after{
     content: 'Välj destination';
-
-
 }
 
 .choice:after{
@@ -1380,12 +1346,15 @@ option{
     option{
         font-size: 15px;
     }
+
     .datum input{
         font-size: 15px;          
     }
+
     .choice select{
         font-size: 15px;
     }
+
     .choice:after{
         font-size: 15px;
     }
@@ -1404,7 +1373,6 @@ option{
 
 .hur:after{
     content: 'Välj restyp';
-
 }
 
 .datum:after{
@@ -1434,10 +1402,6 @@ option{
     text-align: center;
     padding-top: 10px;
 }
-
-
-
-
 
 @media screen and (min-width: 0px) {
     .wrapper{
@@ -1478,7 +1442,6 @@ option{
     display: inherit;;
 }
 
-
 .box{
     background: black;
     display: flex;
@@ -1493,9 +1456,6 @@ option{
     transition: 0.3s;
 }
 
-
-
-
 .center-box{
     background-color: rgb(40, 201, 255);
     grid-area: b5;
@@ -1506,8 +1466,6 @@ option{
     background-color: #e91e62;
 
 }
-
-
 
 .box:hover{
     background-color: rgba(240, 248, 255, 0.685);
@@ -1527,7 +1485,6 @@ option{
 
 box p i{
     color: aliceblue;
-
 }
 
 .center-box-active p i{
@@ -1537,7 +1494,6 @@ box p i{
 .box:hover i{
     color: black;
 }
-
 
 .diamond-grid{
     padding: 0;
@@ -1566,7 +1522,6 @@ box p i{
     display: none;
 }
 
-
 h1{
     color: rgb(255, 255, 255);
     font-family: 'Titillium Web', sans-serif;
@@ -1577,24 +1532,21 @@ h2{
     font-family: 'Titillium Web', sans-serif;
 }
 
-
 p{
     color: rgb(250, 250, 250);
     font-family: 'Titillium Web', sans-serif;
     font-size: 1.4vh;
 }
 
-
-
 .login-reg-panel p{
     padding-top: 5px;
     padding-bottom: 15px;
 }
 
-
 .icon{
     font-size: 4vh;
     cursor: pointer;
+    color: #e7e7e7;
 }
 
 #user_logo{
@@ -1615,12 +1567,6 @@ p{
     color: #444444;
 }
 
-
-
-
-
-
-
 .gridwrapper-weather{
     display: grid;
     grid-template-areas:
@@ -1635,21 +1581,17 @@ p{
     "s6 s6 s6 s6"
     "s7 s7 s7 s7"
     "s8 s8 s8 s8"
-    "fo fo fo fo"
-    
-    ;
+    "fo fo fo fo";
     height: 100vh;
     width: 100vw;
     grid-template-rows: 10vh 55vh 40vh 62vh 62vh 62vh 62vh 62vh 62vh 62vh 80vh 190vh;
     grid-template-columns: 100vw 1fr 1fr 1fr;
-   
     grid-gap: 0.7vh;
     overflow-x: hidden;
     overflow-y: scroll;
     position: fixed;
     background: white;
     z-index: 1;
-
 }
 
 .weather_image{
@@ -1659,10 +1601,7 @@ p{
     background-size: cover;
     background-position: center;
     position: relative;
-
 }
-
-
 
 .weather_image h1{
     display: inline;
@@ -1677,7 +1616,6 @@ p{
     box-shadow: 12px 10px 5px -8px steelblue;
     background: rgb(255, 255, 255);
 }
-
 
 @media screen and (min-width: 1200px) {
     .weather_image h1{
@@ -1731,7 +1669,6 @@ p{
     max-width: 60vh;
 }
 
-
 .card{
     grid-area: s1;
     height: 60vh;
@@ -1746,8 +1683,6 @@ p{
 .card2{
     grid-area: s2;
 }
-
-
 
 .card3{
     grid-area: s3;
@@ -1774,7 +1709,6 @@ p{
     margin-bottom: 500px;
 }
 
-
 @media screen and (min-width: 480px) {
 
     .gridwrapper-weather{
@@ -1787,15 +1721,11 @@ p{
         "s3 s3 s4 s4"
         "s5 s5 s6 s6"
         "s7 s7 s8 s8"
-        "fo fo fo fo"
-        
-        
-        ;
+        "fo fo fo fo";
         height: 100vh;
         width: 100vw;
         grid-template-rows: 10vh 45vw 55vh 70vh 70vh 70vh 90vh 160vh ;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-       
         grid-gap: 0.7vh;
         z-index: 1;
     }
@@ -1820,7 +1750,6 @@ p{
         height: 49vw;
         max-height: 55vh;
     }
-
 }
 
 @media screen and (min-width: 800px) {
@@ -1853,8 +1782,6 @@ p{
         padding-top: 5vh;
         top: 9vh;
     }
-    
-
 }
 
 @media screen and (min-width: 1050px) {
@@ -1869,7 +1796,6 @@ p{
     }
 }
 
-
 .card .front{
     width: 100%;
     height: 100%;
@@ -1882,7 +1808,6 @@ p{
     transform: translateX(0%) rotate(0deg);
     border-radius: 2%;
 }
-
 
 .card3 .front{
     background-image: url(../img/joshua-reddekopp-7Oq9r2CiTLg-unsplash.jpg);
@@ -1957,8 +1882,6 @@ p{
     font-size: 2vh;
     color: white;
 }
-
-
 
 .forecast{
     margin-top: 0vh;
@@ -2071,15 +1994,6 @@ a{
     padding-top: 2.7vh;
 }
 
-
-
-
-
-
-
-
-
-
 .mountain{
     width: 30vh;
     position: relative;
@@ -2130,8 +2044,6 @@ a{
     position: absolute;
     left: 35%;
     margin: -5px 0;
-
-
 }
 
 .with_line{
@@ -2175,7 +2087,6 @@ footer{
     width: calc(22% -20px);
     margin-right: 20px;
     float: left;
-   
 }
 
 .inner_footer .footer_third_one{
@@ -2206,11 +2117,7 @@ footer{
 .inner_footer .footer_third a:hover{
     padding-left: 10px;
     color: rgb(245, 144, 77);
-
 }
-
-
-
 
 @media screen and (max-width: 1050px) {
     .inner_footer{
@@ -2220,12 +2127,11 @@ footer{
         width: 500px;
         height: 100%;
     }
+
     .inner_footer .footer_third{
         margin-left: 0px;
         margin-block-start: 25px;
     }
-    
-
 }
 
 @media screen and (max-width: 750px){
@@ -2258,10 +2164,6 @@ footer{
     }
 }
 
-
-
-
-
 .gridwrapper-orter{
     display: grid;
     grid-template-areas:
@@ -2289,7 +2191,6 @@ footer{
     overflow-x: hidden;
     overflow-y: scroll;
     position: fixed;
-   
 }
 
 .orter_ruta{
@@ -2317,7 +2218,6 @@ footer{
     position: absolute;
     top: 15vh;
     left: calc((100vw - 70vw) / 2);
-    
     display: grid;
     grid-template-areas: 
     "n01 n02 n03 n04 n05"
@@ -2329,7 +2229,6 @@ footer{
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;  
 }
-
 
 .item{
     background: linear-gradient(rgb(4, 5, 61), rgba(9, 73, 133, 0.776));;
@@ -2343,7 +2242,6 @@ footer{
     box-shadow: 10px 10px 30px 5px steelblue;
     
 }
-
 
 .item{
     background: linear-gradient(rgb(4, 5, 61), rgba(9, 73, 133, 0.776));;
@@ -2404,8 +2302,6 @@ footer{
     font-size: 0.5vh;
 }
 
-
-
 @media screen and (min-width: 500px) {
     .item h2{
     font-size: 1.5vh;
@@ -2460,7 +2356,6 @@ footer{
     }
 }
 
-
 .item:hover h2{
     color: rgb(14, 19, 70);
 } 
@@ -2472,9 +2367,6 @@ footer{
 .item6:hover{
     background: rgb(4, 5, 61);
 }
-
-
-
 
 .article_orter{
     height: 270vh;
@@ -2549,12 +2441,10 @@ footer{
     grid-area: a8;
 } */
 
-
 .article_image_orter{
     height: auto;
     width: 90vw;
     margin-left: 5vw;
-
 }
 
 .article_orter h1{
@@ -2573,7 +2463,6 @@ footer{
     color: rgb(15, 15, 15);
     font-family: 'Titillium Web', sans-serif;
     font-size: 3vh;
-
 }
 
 .article_orter p{
@@ -2621,9 +2510,6 @@ footer{
     grid-area: n4;
 }
 
-
-
-
 .skidinfo h4{
     margin: 30px;
     color: rgb(15, 15, 15);
@@ -2655,8 +2541,6 @@ footer{
 }
 
 @media screen and (min-width: 500px) {
-
-    
     .skidinfo-grid{
         display: grid;
         grid-template-areas: 
@@ -2668,6 +2552,7 @@ footer{
         width: 100vw;  
         grid-gap: 3px;
     }
+
     .skidinfo{
         height: 50vh;
         width: 40vw;   border: 1px solid black;
@@ -2701,13 +2586,13 @@ footer{
         top: 40vh;
     }
 
-
     .skidinfo-grid{
         grid-template-areas: 
         "n1 n2 n3 n4";
         grid-template-rows: 50vh;
         grid-template-columns: 20vw 20vw 20vw 20vw;
     }
+
     .skidinfo{
         width: 20vw;
     }
@@ -2748,7 +2633,6 @@ footer{
     right: calc((100% - 5vw) / 2);
     margin-top: 4vh;
     color: #1598cc;
-
 } */
 
 .blue_slopes{
@@ -2762,8 +2646,6 @@ footer{
     position: relative;
     left: 4.8px;
 }
-
-
 
 .gridwrapper-erbjudanden{
     display: grid;
@@ -2820,7 +2702,6 @@ footer{
     "n6";
 }
 
-
 .hotels section{
     position: relative;
     height: 24vh;
@@ -2835,12 +2716,11 @@ footer{
 .hotel_text_container{
     padding: 2vh 0;  
     z-index: 2;
-    height: 21vh;   
+    height: 20vh;   
     width: 70vw; 
     opacity: 1;  
     background: rgba(0, 128, 128, 0.514);
 }
-
 
 .hotel1{
     background-image: url(../img/marten-bjork-n_IKQDCyrG0-unsplash.jpg);
@@ -2877,7 +2757,6 @@ footer{
     grid-area: n6;
     position: relative;
     left: 35vw;
-
 }
 
 .hotel2{
@@ -2910,7 +2789,6 @@ footer{
     grid-area: n6;
 }
 
-
 .hotel_text_container h2{
     color: #e7e7e7;
     margin: 2vw 3vh 0 5vw;
@@ -2933,7 +2811,6 @@ footer{
     color: rgb(255, 255, 255);
 }
 
-
 /* .hotel3::before{
     content: "";
     width: 60%;
@@ -2943,8 +2820,6 @@ footer{
     left: 0;
     transition: transform 0.5s;
     z-index: -1;
-
-
 } */
 
 /* .hotel3 p{
@@ -2952,7 +2827,6 @@ footer{
     font-size: min(2vw, 2vh);
     max-width: 45vw;
     z-index: 3;
-
 } */
 
 /* .read_more{
@@ -2986,7 +2860,6 @@ footer{
     z-index: 2
 }
 
- 
 .read_more p,
 .read_more_filled p{
     color: #ffffff;
@@ -2997,12 +2870,10 @@ footer{
     margin-top: 1.5vh;
 } */
 
-
 .kontakta_oss_erbjudanden{
     grid-area: a2;
     height: 50vh;
 }
-
 
 @media screen and (min-width: 400px) {
     .gridwrapper-erbjudanden{
@@ -3056,9 +2927,7 @@ footer{
         grid-area: n6;
         position: relative;
         left: 0vw;
-    
     }
-
 }
 
 @media screen and (min-width: 750px) {
@@ -3119,21 +2988,14 @@ footer{
         grid-area: n6;
         position: relative;
         left: 0vw;
-    
     }
 
     .resetips{
         position: relative;
     }
-
-
-
-    
-
 }
 
 @media screen and (min-width: 930px) {
-
     .resetips p{
         max-width: 40vh;
         display: block;
@@ -3143,6 +3005,7 @@ footer{
         position: absolute;
         left: 50vh;
     }
+
     #by_the_side1{
         position: relative;
         bottom: 72vh;
@@ -3154,5 +3017,4 @@ footer{
         bottom: 72vh;
         max-width: 40vh;
     }
-
 }

@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 const Slide = ()=>{
     const burger = document.querySelector('.burger');
     const nav    = document.querySelector('.meny');
@@ -29,7 +23,7 @@ const Slide = ()=>{
     });
         
         });
-    }
+}
 
 const Share = ()=>{
     const shareButton = document.querySelector('.center-box');
@@ -60,11 +54,11 @@ const changeIcon = ()=>{
     const shareButton = document.querySelector('.center-box');
 
     shareButton.addEventListener('click',() => {
-         if(document.querySelector("#icon").className == 'fa fa-share-alt'){
+         if(document.querySelector("#icon").className == 'far fa-share-square'){
             document.querySelector("#icon").className = "fa fa-times";
 
         }else{   
-            document.querySelector("#icon").className = "fa fa-share-alt";
+            document.querySelector("#icon").className = "far fa-share-square";
         }
 
     });
@@ -103,6 +97,7 @@ $('.login-reg-panel input[type="radio"]').on('change', function() {
     }
 });
 
+/* 
 function test_str() { 
 
     var str = 
@@ -113,11 +108,8 @@ function test_str() {
         $('#user_logo_index').removeClass('fa fa-user');
 } 
 
+test_str() */
 
-
-
-
-    
 const header = document.querySelector(".nav");
 const sectionOne = document.querySelector(".img-sektion");
 
@@ -142,7 +134,6 @@ if (sectionOne != null){
 
     sectionOneObserver.observe(sectionOne);
 }
-
 
 const wrapper = document.querySelector(".wrapper");
 const sectionTwo = document.querySelector(".footer");
@@ -177,11 +168,11 @@ const sectionTwoObserver = new IntersectionObserver(function(
         shareButton7.classList.add('box-active');
         shareButton8.classList.add('box-active');
         shareButton9.classList.add('box-active');
-        if(document.querySelector("#icon").className == 'fa fa-share-alt'){
+        if(document.querySelector("#icon").className == 'far fa-share-square'){
             document.querySelector("#icon").className = "fa fa-times";
         }
         else{   
-            document.querySelector("#icon").className = "fa fa-times";
+            document.querySelector("#icon").className = "far fa-share-square";
         }
 
     } 
@@ -196,20 +187,15 @@ const sectionTwoObserver = new IntersectionObserver(function(
         shareButton7.classList.remove('box-active');
         shareButton8.classList.remove('box-active');
         shareButton9.classList.remove('box-active');  
-        document.querySelector("#icon").className = "fa fa-share-alt";
-    
-        
+        document.querySelector("#icon").className = "far fa-share-square"; 
     }
-    
-    
   });
 },
-sectionTwoOptions);
 
+sectionTwoOptions);
 sectionTwoObserver.observe(sectionTwo);
 
 
-    
 const showBack = ()=>{
     document.querySelector('.more').addEventListener('click',() =>{
         document.querySelector('.back').classList.toggle('back-active');
@@ -225,10 +211,6 @@ const showFront = ()=>{
     });
 }
 showFront(); 
-
-
-
-
 
 const showBack2 = ()=>{
     document.querySelector('.more2').addEventListener('click',() =>{
@@ -246,9 +228,6 @@ const showFront2 = ()=>{
 }
 showFront2(); 
 
-
-
-
 const showBack3 = ()=>{
     document.querySelector('.more3').addEventListener('click',() =>{
         document.querySelector('.back3').classList.toggle('back-active');
@@ -264,8 +243,6 @@ const showFront3 = ()=>{
     });
 }
 showFront3(); 
-
-
 
 const showBack4 = ()=>{
     document.querySelector('.more4').addEventListener('click',() =>{
@@ -283,9 +260,6 @@ const showFront4 = ()=>{
 }
 showFront4(); 
 
-
-
-
 const showBack5 = ()=>{
     document.querySelector('.more5').addEventListener('click',() =>{
         document.querySelector('.back5').classList.toggle('back-active');
@@ -301,8 +275,6 @@ const showFront5 = ()=>{
     });
 }
 showFront5(); 
-
-
 
 const showBack6 = ()=>{
     document.querySelector('.more6').addEventListener('click',() =>{
@@ -320,9 +292,6 @@ const showFront6 = ()=>{
 }
 showFront6(); 
 
-
-
-
 const showBack7 = ()=>{
     document.querySelector('.more7').addEventListener('click',() =>{
         document.querySelector('.back7').classList.toggle('back-active');
@@ -338,8 +307,6 @@ const showFront7 = ()=>{
     });
 }
 showFront7(); 
-
-
 
 const showBack8 = ()=>{
     document.querySelector('.more8').addEventListener('click',() =>{
@@ -358,7 +325,7 @@ const showFront8 = ()=>{
 showFront8(); 
 
 
-
+/* 
 
 window.addEventListener('load', ()=> {
     let long;
@@ -387,6 +354,6 @@ window.addEventListener('load', ()=> {
 
     }
 });
-
+ */
 
 
